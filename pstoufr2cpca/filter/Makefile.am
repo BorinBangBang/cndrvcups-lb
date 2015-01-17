@@ -8,3 +8,5 @@ pstoufr2cpca_SOURCES = \
 pstoufr2cpca_LDADD = -lbuftool -lcups 
 
 AM_CFLAGS = -O2 -Wall -fPIC
+
+ACLOCAL_AMFLAGS = -I m4
