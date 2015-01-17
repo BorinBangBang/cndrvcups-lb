@@ -1,0 +1,2990 @@
+# Print Dialog for Canon LIPS/PS/LIPSLX/UFR2/CAPT Printer.
+# Copyright CANON INC. 2004
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cngplp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-13 19:18+0900\n"
+"PO-Revision-Date: 2004-04-14 20:28+0900\n"
+"Last-Translator: CANON INC.\n"
+"Language-Team: CANON INC.\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gladestr.h:2
+#, no-c-format
+msgid "(0 to 200)%"
+msgstr "(0 a 200) %"
+
+#: gladestr.h:3
+msgid "(1 to 10000)"
+msgstr " (1 a 10.000)"
+
+#: gladestr.h:4
+msgid "(1 to 9999)"
+msgstr "(1 a 9.999)"
+
+#: gladestr.h:5
+msgid "(1 to 9999999)"
+msgstr "(1 a 9.999.999)"
+
+#: gladestr.h:6
+msgid "(Max. 32 characters)"
+msgstr "(Massimo 32 caratteri)"
+
+#: gladestr.h:7
+msgid "*"
+msgstr ""
+
+#: gladestr.h:8
+msgid "0 to 99"
+msgstr "Da 0 a 99"
+
+#: gladestr.h:9
+msgid "Adjust Trim Width by"
+msgstr "Regola larghezza ritaglio di"
+
+#: gladestr.h:10
+msgid "Advanced Settings"
+msgstr "Impostazioni avanzate"
+
+#: gladestr.h:11
+msgid "Advanced Settings..."
+msgstr "Impostazioni avanzate..."
+
+#: gladestr.h:12
+msgid "Advanced Smoothing:"
+msgstr "Sfumata avanzata:"
+
+#: gladestr.h:13
+msgid "Allow Password Setting"
+msgstr "Consenti impostazione password"
+
+#: gladestr.h:14
+msgid "Apply Device Settings"
+msgstr "Impostazione periferica"
+
+#: gladestr.h:15
+msgid "Automatic Correction"
+msgstr "Correzione automatica"
+
+#: gladestr.h:16 keystr.h:68
+msgid "B & W Halftones:"
+msgstr "Mezzi toni bianco e nero:"
+
+#: gladestr.h:17
+msgid "Back Side"
+msgstr "Lato posteriore"
+
+#: gladestr.h:18
+msgid "Banner"
+msgstr "Intestazione"
+
+#: gladestr.h:19
+msgid "Binding Location:"
+msgstr "Posizione di rilegatura:"
+
+#: gladestr.h:20
+msgid "Book Opening:"
+msgstr "Apertura libro:"
+
+#: gladestr.h:21
+msgid "Booklet..."
+msgstr "Impostazioni dettagliate per opuscolo..."
+
+#: gladestr.h:22
+msgid "Brightness and Gamma"
+msgstr "Luminosità e gamma"
+
+#: gladestr.h:23
+msgid "Brightness:"
+msgstr "Luminosità:"
+
+#: gladestr.h:24
+msgid "Cancel"
+msgstr "Annulla"
+
+#: gladestr.h:25
+msgid "Color Halftones:"
+msgstr "Mezzitoni colore:"
+
+#: gladestr.h:26
+msgid "Color Mode:"
+msgstr "Modalità colore:"
+
+#: gladestr.h:27
+msgid "Color to Use with Black:"
+msgstr "Colore da utilizzare con nero:"
+
+#: gladestr.h:28
+msgid "Copy Set Numbering"
+msgstr "Numerazione serie di copie"
+
+#: gladestr.h:29
+msgid "Correction Width:"
+msgstr "Larghezza correzione:"
+
+#: gladestr.h:30
+msgid "Data Name"
+msgstr "Nome dati"
+
+#: gladestr.h:31
+msgid "Dept. ID Management Authentication:"
+msgstr "Autenticazione gestione ID reparto:"
+
+#: gladestr.h:32
+msgid "Detailed Settings for Booklet"
+msgstr "Impostaz. dettagliate per opuscolo"
+
+#: gladestr.h:33
+msgid "Device Setting "
+msgstr "Impostazione periferica"
+
+#: gladestr.h:34
+msgid "Device Settings"
+msgstr "Impostazioni periferica"
+
+#: gladestr.h:35
+msgid "Disable Job Accounting When B&W Print"
+msgstr "Disatt. Job Accounting se la stampa è in B&N"
+
+#: gladestr.h:36
+msgid "Displacement Correction Method"
+msgstr "Metodo di correzione scostamento"
+
+#: gladestr.h:37
+msgid "Document Insertion Unit"
+msgstr "Unità d'inserimento"
+
+#: gladestr.h:38
+msgid "Document Name:"
+msgstr "Nome documento:"
+
+#: gladestr.h:39 keystr.h:122
+msgid "Draft Mode:"
+msgstr "Modalità bozza:"
+
+#: gladestr.h:40
+msgid "End:"
+msgstr "Fine:"
+
+#: gladestr.h:41
+msgid "Enter Name"
+msgstr "Immettere il nome"
+
+#: gladestr.h:42
+msgid "Face Up/Face Down:"
+msgstr "Verso l'alto/Verso il basso:"
+
+#: gladestr.h:43
+msgid "Feed A5 from Short Edge:"
+msgstr "Inserire un A5 dal lato corto:"
+
+#: gladestr.h:44
+msgid "Finishing"
+msgstr "Finitura"
+
+#: gladestr.h:45
+msgid "Finishing Details"
+msgstr "Dettagli di finitura"
+
+#: gladestr.h:46
+msgid "Finishing Details..."
+msgstr "Dettagli di finitura..."
+
+#: gladestr.h:47
+msgid "Finishing:"
+msgstr "Finitura:"
+
+#: gladestr.h:48
+msgid "Fold Details:"
+msgstr "Dettagli piegatura:"
+
+#: gladestr.h:49
+msgid "Fold:"
+msgstr "Piegatura:"
+
+#: gladestr.h:50
+msgid "Front Side"
+msgstr "Lato anteriore"
+
+#: gladestr.h:51
+msgid "Front/Back Cover Settings"
+msgstr "Impostazioni copertina anteriore/posteriore"
+
+#: gladestr.h:52
+msgid "Front/Back Cover Settings..."
+msgstr "Impostazioni copertina anteriore/posteriore..."
+
+#: gladestr.h:53
+msgid "Gamma:"
+msgstr "Gamma:"
+
+#: gladestr.h:54
+msgid "General"
+msgstr "Generale"
+
+#: gladestr.h:55
+msgid "Glossy Plain Paper Processing:"
+msgstr "Elaborazione carta comune lucida:"
+
+#: gladestr.h:56
+msgid "Gutter Settings"
+msgstr "Impostazioni rilegatura"
+
+#: gladestr.h:57
+msgid "Gutter..."
+msgstr "Rilegatura..."
+
+#: gladestr.h:58
+msgid "Gutter:"
+msgstr "Rilegatura:"
+
+#: gladestr.h:59
+msgid "Hole Punch"
+msgstr "Foratura"
+
+#: gladestr.h:60
+msgid "ID/Password Settings"
+msgstr "ID/Password"
+
+#: gladestr.h:61
+msgid "ID:"
+msgstr "ID:"
+
+#: gladestr.h:62
+msgid "Image Refinement:"
+msgstr "Miglioramento immagine:"
+
+#: gladestr.h:63
+msgid "Insert Interleaf Sheets:"
+msgstr "Inserisci fogli tra i lucidi:"
+
+#: gladestr.h:64
+msgid "Job Accounting"
+msgstr "Job Accounting"
+
+#: gladestr.h:65
+msgid "Landscape"
+msgstr "Orizzontale"
+
+#: gladestr.h:66
+msgid "Line Control:"
+msgstr "Controllo riga:"
+
+#: gladestr.h:67
+msgid "Line Refinement:"
+msgstr "Miglioramento riga:"
+
+#: gladestr.h:68
+msgid "Long Edge:"
+msgstr "Lato lungo:"
+
+#: gladestr.h:69
+msgid "Manual Correction"
+msgstr "Correzione manuale"
+
+#: gladestr.h:70
+msgid "Manual Setting"
+msgstr "Impostazione manuale"
+
+#: gladestr.h:71
+msgid "Matching Method:"
+msgstr "Metodo corrispondenza:"
+
+#: gladestr.h:72
+msgid "Name Setting"
+msgstr "Nome Impostazioni"
+
+#: gladestr.h:73
+msgid "Name of Data to Hold"
+msgstr "Nome dei dati da trattenere"
+
+#: gladestr.h:74
+msgid "Name: "
+msgstr "Nome:"
+
+#: gladestr.h:75
+msgid "Number of Colors:"
+msgstr "Numero di colori:"
+
+#: gladestr.h:76
+msgid "Number of Copies for Offset:  "
+msgstr "Numero di copie di offset:"
+
+#: gladestr.h:77
+msgid "OK"
+msgstr ""
+
+#: gladestr.h:78
+msgid "Offset"
+msgstr "Scostamento"
+
+#: gladestr.h:79
+msgid "Orientation"
+msgstr "Orientamento"
+
+#: gladestr.h:80
+msgid "Output Adjustment Mode:"
+msgstr "Modalità regolazione stampa:"
+
+#: gladestr.h:81
+msgid "Output Method:"
+msgstr "Metodo di stampa:"
+
+#: gladestr.h:82
+msgid "Output Options:"
+msgstr "Opzioni di stampa:"
+
+#: gladestr.h:83
+msgid "Page Layout"
+msgstr "Layout di pagina"
+
+#: gladestr.h:84
+msgid "Page Size:"
+msgstr "Formato pagina:"
+
+#: gladestr.h:85
+msgid "Paper Folding Unit"
+msgstr "Unità di piegatura fogli-C1"
+
+#: gladestr.h:86
+msgid "Paper Output:"
+msgstr "Uscita carta:"
+
+#: gladestr.h:87
+msgid "Paper Source"
+msgstr "Alimentazione carta"
+
+#: gladestr.h:88
+msgid "Paper Source  "
+msgstr "Alimentazione carta"
+
+#: gladestr.h:89
+msgid "Paper Source Options:"
+msgstr "Opzioni alimentazione:"
+
+#: gladestr.h:90
+msgid "Paper Source:"
+msgstr "Alimentazione carta:"
+
+#: gladestr.h:91
+msgid "Paper Type"
+msgstr "Tipo di carta"
+
+#: gladestr.h:92
+msgid "Paper Type:"
+msgstr "Tipo di carta:"
+
+#: gladestr.h:93
+msgid "Password:"
+msgstr "Password:"
+
+#: gladestr.h:94
+msgid "Portrait"
+msgstr "Verticale"
+
+#: gladestr.h:95
+msgid "Print Style:"
+msgstr "Stile di stampa:"
+
+#: gladestr.h:96
+msgid "Print on Interleaf Sheets"
+msgstr "Stampa sui fogli tra i lucidi"
+
+#: gladestr.h:97
+msgid "Print on:"
+msgstr "Stampa su:"
+
+#: gladestr.h:98
+msgid "Professional Puncher-C1"
+msgstr "Unità di foratura professionale-C1"
+
+#: gladestr.h:99
+msgid "Profile Settings"
+msgstr "Impostazioni profilo"
+
+#: gladestr.h:100
+msgid "Profile Settings..."
+msgstr "Impostazioni profilo..."
+
+#: gladestr.h:101
+msgid "Puncher Unit"
+msgstr "Unità di foratura"
+
+#: gladestr.h:102
+msgid "Quality"
+msgstr "Qualità"
+
+#: gladestr.h:103
+msgid "RGB"
+msgstr ""
+
+#: gladestr.h:104
+msgid "Resolution:"
+msgstr "Risoluzione:"
+
+#: gladestr.h:105
+msgid "Restore Defaults"
+msgstr "Ripristina valori predefiniti"
+
+#: gladestr.h:106
+msgid "Reverse Landscape"
+msgstr "Orizzontale capovolto"
+
+#: gladestr.h:107
+msgid "Reverse Portrait"
+msgstr "Verticale capovolto"
+
+#: gladestr.h:108
+msgid "Rotate"
+msgstr "Ruota"
+
+#: gladestr.h:109 keystr.h:359
+msgid "Saddle Finisher-G1"
+msgstr "Finisher con pinz. a sella G1"
+
+#: gladestr.h:110
+msgid "Saddle Stitch Setting:"
+msgstr "Impostazione pinzatura a sella:"
+
+#: gladestr.h:111 keystr.h:380
+msgid "Secure Watermark Function of Device"
+msgstr "Funzione Filigrana invisibile della periferica"
+
+#: gladestr.h:112
+msgid "Secured Print Authentication:"
+msgstr "Autenticazione Stampa protetta:"
+
+#: gladestr.h:113
+msgid "Secured Print Settings"
+msgstr "Impostazioni di stampa protetta"
+
+#: gladestr.h:114
+msgid "Select by"
+msgstr "Seleziona per"
+
+#: gladestr.h:115
+msgid "Set Back Cover"
+msgstr "Imposta copertina posteriore"
+
+#: gladestr.h:116
+msgid "Set Front Cover"
+msgstr "Imposta copertina anteriore"
+
+#: gladestr.h:117
+msgid "Settings..."
+msgstr "Impostazioni..."
+
+#: gladestr.h:118
+msgid "Sharpness (Photo):"
+msgstr "Nitidezza (Foto):"
+
+#: gladestr.h:119
+msgid "Sharpness:"
+msgstr "Nitidezza:"
+
+#: gladestr.h:120
+msgid "Shift the Position to Start Printing"
+msgstr "Sposta posizione di inizio stampa"
+
+#: gladestr.h:121
+msgid "Short Edge:"
+msgstr "Lato corto:"
+
+#: gladestr.h:122
+msgid "Small-size Curl Adjustment:"
+msgstr "Regolazione curvatura piccole dimensioni:"
+
+#: gladestr.h:123
+msgid "Source Profile:"
+msgstr "Profilo origine:"
+
+#: gladestr.h:124
+msgid "Special Print Adjustment A:"
+msgstr "Regolazione stampa speciale A:"
+
+#: gladestr.h:125
+msgid "Special Print Adjustment B:"
+msgstr "Regolazione stampa speciale B:"
+
+#: gladestr.h:126 keystr.h:392
+msgid "Special Print Mode:"
+msgstr "Modalità stampa speciale:"
+
+#: gladestr.h:127
+msgid "Special Print Mode: "
+msgstr "Modalità stampa speciale:"
+
+#: gladestr.h:128 keystr.h:394
+msgid "Special Settings 1:"
+msgstr "Impostazioni speciali 1:"
+
+#: gladestr.h:129
+msgid "Special Smoothing Mode:"
+msgstr "Modalità gradazione speciale:"
+
+#: gladestr.h:130 keystr.h:418
+msgid "Staple"
+msgstr "Pinzatura"
+
+#: gladestr.h:131
+msgid "Staple Position:"
+msgstr "Posizione di pinzatura:"
+
+#: gladestr.h:132
+msgid "Start:"
+msgstr "Inizio:"
+
+#: gladestr.h:133
+msgid "Starting Number:"
+msgstr "Numero iniziale:"
+
+#: gladestr.h:134
+msgid "Store Destination"
+msgstr "Dest. memorizzazione"
+
+#: gladestr.h:135
+msgid "Toner Density:"
+msgstr "Densità toner:"
+
+#: gladestr.h:136 keystr.h:436
+msgid "Toner Save:"
+msgstr "Risparmio toner:"
+
+#: gladestr.h:137
+msgid "Toner Volume Adjustment:"
+msgstr "Regolazione volume toner:"
+
+#: gladestr.h:138
+msgid "Transparency Printing:"
+msgstr "Stampa lucido:"
+
+#: gladestr.h:139
+msgid "Trim Width:"
+msgstr "Larghezza ritaglio:"
+
+#: gladestr.h:140
+msgid "Trimmer"
+msgstr "Trimmer"
+
+#: gladestr.h:141
+msgid "Use Creep (Displacement) Correction"
+msgstr "Utilizza correzione scostamento"
+
+#: gladestr.h:142
+msgid "Use Document Insertion Unit"
+msgstr "Usa unità d'inserimento"
+
+#: gladestr.h:143
+msgid "Use File Name"
+msgstr "Usa nome file"
+
+#: gladestr.h:144 keystr.h:450
+msgid "Use Secure Watermark Function of Device"
+msgstr "Utilizza funzione Filigrana protetta della periferica"
+
+#: gladestr.h:145
+msgid "User Inboxes:"
+msgstr "Mail box utente:"
+
+#: gladestr.h:146
+msgid "User Name:"
+msgstr "Nome utente:"
+
+#: gladestr.h:147
+msgid "mm (-10.3 to 10.2)"
+msgstr "mm (-10,3 a 10,2)"
+
+#: gladestr.h:148
+msgid "mm (-50 to 50)"
+msgstr "mm (-50 a 50)"
+
+#: gladestr.h:149
+msgid "mm (0 to 30)"
+msgstr "mm [0 a 30]"
+
+#: gladestr.h:150
+msgid "mm (0.00 to 10.00)"
+msgstr "mm (0,00 a 10,00)"
+
+#: keystr.h:1
+msgid "(1 to 9999) "
+msgstr "(1 a 9.999)"
+
+#: keystr.h:2
+msgid "-1 (Light)"
+msgstr "-1 (Chiaro)"
+
+#: keystr.h:3
+msgid "-1 (Low)"
+msgstr "-1 (Bassa)"
+
+#: keystr.h:4
+msgid "-2 (Light)"
+msgstr "-2 (Chiaro)"
+
+#: keystr.h:5
+msgid "-2 (Low)"
+msgstr "-2 (Bassa)"
+
+#: keystr.h:6
+msgid "-3 (Light)"
+msgstr "-3 (Chiaro)"
+
+#: keystr.h:7
+msgid "-3 (Low)"
+msgstr "-3 (Bassa)"
+
+#: keystr.h:8
+msgid "-4 (Light)"
+msgstr "-4 (Chiaro)"
+
+#: keystr.h:9
+msgid "-5 (Light)"
+msgstr "-5 (Chiaro)"
+
+#: keystr.h:10
+msgid "-6 (Light)"
+msgstr "-6 (Chiaro)"
+
+#: keystr.h:11
+msgid "-7 (Light)"
+msgstr "-7 (Chiaro)"
+
+#: keystr.h:12
+msgid "-8 (Light)"
+msgstr "-8 (Chiaro)"
+
+#: keystr.h:13
+msgid "0 (Standard)"
+msgstr "0 (Normale)"
+
+#: keystr.h:14
+#, c-format
+msgid "0 to %d"
+msgstr "0 a %d"
+
+#: keystr.h:15
+msgid "1 (Dark)"
+msgstr "1 (Scuro)"
+
+#: keystr.h:16
+msgid "1 (High)"
+msgstr "1 (Alta)"
+
+#: keystr.h:17
+msgid "1 Page per Sheet"
+msgstr "1 pagina per foglio"
+
+#: keystr.h:18
+msgid "1-sided Coated 1"
+msgstr "Patinata su un lato 1"
+
+#: keystr.h:19
+msgid "1-sided Coated 2"
+msgstr "Patinata su un lato 2"
+
+#: keystr.h:20
+msgid "1-sided Coated 3"
+msgstr "Patinata su un lato 3"
+
+#: keystr.h:21
+msgid "1-sided Coated 4"
+msgstr "Patinata su un lato 4"
+
+#: keystr.h:22
+msgid "1-sided Coated 5"
+msgstr "Patinata su un lato 5"
+
+#: keystr.h:23
+msgid "1-sided Printing"
+msgstr "Stampa su un lato"
+
+#: keystr.h:24
+msgid "11x17 "
+msgstr "11x17 "
+
+#: keystr.h:25
+msgid "11x17"
+msgstr "11x17"
+
+#: keystr.h:26
+msgid "1200 dpi"
+msgstr "1.200 dpi"
+
+#: keystr.h:27
+msgid "12x18"
+msgstr ""
+
+#: keystr.h:28
+msgid "13x19"
+msgstr ""
+
+#: keystr.h:29
+msgid "16 Pages per Sheet"
+msgstr "16 pagine per foglio"
+
+#: keystr.h:30
+msgid "16K"
+msgstr ""
+
+#: keystr.h:31
+msgid "2 (Dark)"
+msgstr "2 (Scuro)"
+
+#: keystr.h:32
+msgid "2 (High)"
+msgstr "2 (Alta)"
+
+#: keystr.h:33
+msgid "2 Holes (French)"
+msgstr "2 fori (francese)"
+
+#: keystr.h:34
+msgid "2 Holes"
+msgstr "2 fori"
+
+#: keystr.h:35
+msgid "2 Pages per Sheet"
+msgstr "2 pagine per foglio"
+
+#: keystr.h:36
+msgid "2-sided Coated 1"
+msgstr "Patinata fronte/retro 1"
+
+#: keystr.h:37
+msgid "2-sided Coated 2"
+msgstr "Patinata fronte/retro 2"
+
+#: keystr.h:38
+msgid "2-sided Coated 3"
+msgstr "Patinata fronte/retro 3"
+
+#: keystr.h:39
+msgid "2-sided Coated 4"
+msgstr "Patinata fronte/retro 4"
+
+#: keystr.h:40
+msgid "2-sided Coated 5"
+msgstr "Patinata fronte/retro 5"
+
+#: keystr.h:41
+msgid "2-sided Printing"
+msgstr "Stampa fronte/retro"
+
+#: keystr.h:42
+msgid "2/3 Holes"
+msgstr "2/3 fori"
+
+#: keystr.h:43
+msgid "3 (Dark)"
+msgstr "3 (Scuro)"
+
+#: keystr.h:44
+msgid "3 (High)"
+msgstr "3 (Alta)"
+
+#: keystr.h:45
+msgid "3-Hole Punch"
+msgstr ""
+
+#: keystr.h:46
+msgid "300 dpi"
+msgstr "300 dpi"
+
+#: keystr.h:47
+msgid "4 (Dark)"
+msgstr "4 (Scuro)"
+
+#: keystr.h:48
+msgid "4 Holes (French)"
+msgstr "4 fori (francese)"
+
+#: keystr.h:49
+msgid "4 Holes (Swedish)"
+msgstr "4 fori (svedese)"
+
+#: keystr.h:50
+msgid "4 Pages per Sheet"
+msgstr "4 pagine per foglio"
+
+#: keystr.h:51
+msgid "4 on 1 Postcard"
+msgstr "Cartolina 4 su 1"
+
+#: keystr.h:52
+msgid "5 (Dark)"
+msgstr "5 (Scuro)"
+
+#: keystr.h:53
+msgid "6 (Dark)"
+msgstr "6 (Scuro)"
+
+#: keystr.h:54
+msgid "6 Pages per Sheet"
+msgstr "6 pagine per foglio"
+
+#: keystr.h:55
+msgid "600 dpi"
+msgstr "600 dpi"
+
+#: keystr.h:56
+msgid "7 (Dark)"
+msgstr "7 (Scuro)"
+
+#: keystr.h:57
+msgid "7-bin Sorter"
+msgstr "Fascicolatore a 7 scomparti"
+
+#: keystr.h:58
+msgid "8 (Dark)"
+msgstr "8 (Scuro)"
+
+#: keystr.h:59
+msgid "8K"
+msgstr ""
+
+#: keystr.h:60
+msgid "9 Pages per Sheet"
+msgstr "9 pagine per foglio"
+
+#: keystr.h:61
+msgid "A3"
+msgstr ""
+
+#: keystr.h:62
+msgid "A4"
+msgstr ""
+
+#: keystr.h:63
+msgid "A5"
+msgstr ""
+
+#: keystr.h:64
+msgid "A6"
+msgstr ""
+
+#: keystr.h:65
+msgid "Accordion Z-fold"
+msgstr "Piegatura a Z (a fisarmonica)"
+
+#: keystr.h:66
+msgid "Auto Detect"
+msgstr "Rilevazione automatica"
+
+#: keystr.h:67
+msgid "Auto"
+msgstr "Auto"
+
+#: keystr.h:69
+msgid "B4"
+msgstr ""
+
+#: keystr.h:70
+msgid "B5"
+msgstr ""
+
+#: keystr.h:71
+msgid "Barcode Adjustment Mode:"
+msgstr "Modalità di regolazione del codice a barre:"
+
+#: keystr.h:72
+msgid "Bin 1"
+msgstr "Scomparto 1"
+
+#: keystr.h:73
+msgid "Bin 2"
+msgstr "Scomparto 2"
+
+#: keystr.h:74
+msgid "Bin 3"
+msgstr "Scomparto 3"
+
+#: keystr.h:75
+msgid "Bin 4"
+msgstr "Scomparto 4"
+
+#: keystr.h:76
+msgid "Bin 5"
+msgstr "Scomparto 5"
+
+#: keystr.h:77
+msgid "Bin 6"
+msgstr "Scomparto 6"
+
+#: keystr.h:78
+msgid "Bin 7"
+msgstr "Scomparto 7"
+
+#: keystr.h:79
+msgid "Black and White"
+msgstr "Bianco e Nero"
+
+#: keystr.h:80
+msgid "Blue"
+msgstr "Blu"
+
+#: keystr.h:81
+msgid "Bond Paper"
+msgstr "Carta ad alta qualità"
+
+#: keystr.h:82
+msgid "Booklet Finisher-A1"
+msgstr "Finisher opuscolo-A1"
+
+#: keystr.h:83
+msgid "Booklet Finisher-B1"
+msgstr "Finisher opuscolo-B1"
+
+#: keystr.h:84
+msgid "Booklet Finisher-C1"
+msgstr "Finisher opuscolo-C1"
+
+#: keystr.h:85
+msgid "Booklet Finisher-D1"
+msgstr "Finisher opuscolo-D1"
+
+#: keystr.h:86
+msgid "Booklet Finisher-E1"
+msgstr "Finisher opuscolo-E1"
+
+#: keystr.h:87
+msgid "Booklet Finisher-F1"
+msgstr "Finisher opuscolo-F1"
+
+#: keystr.h:88
+msgid "Booklet Finisher-G1"
+msgstr "Finisher opuscolo-G1"
+
+#: keystr.h:89
+msgid "Booklet Finisher-J1"
+msgstr "Finisher opuscolo-J1"
+
+#: keystr.h:90
+msgid "Booklet Finisher-K1"
+msgstr "Finisher opuscolo-K1"
+
+#: keystr.h:91
+msgid "Booklet Finisher-L1"
+msgstr "Finisher opuscolo-L1"
+
+#: keystr.h:92
+msgid "Booklet Finisher-M1"
+msgstr "Finisher opuscolo-M1"
+
+#: keystr.h:93
+msgid "Booklet Finisher-N1"
+msgstr "Booklet Finisher-N1"
+
+#: keystr.h:94
+msgid "Booklet Finisher-P1"
+msgstr "Booklet Finisher-P1"
+
+#: keystr.h:95
+msgid "Booklet Finisher-Q1"
+msgstr "Booklet Finisher-Q1"
+
+#: keystr.h:96
+msgid "Booklet Printing"
+msgstr "Stampa opuscolo"
+
+#: keystr.h:97
+msgid "Both Sides"
+msgstr "Fronte/retro"
+
+#: keystr.h:98
+msgid "Bottom (Double)"
+msgstr "In basso (Doppia)"
+
+#: keystr.h:99
+msgid "Bottom Binding"
+msgstr "Rilegatura in basso"
+
+#: keystr.h:100
+msgid "C-fold"
+msgstr "Piegatura a C"
+
+#: keystr.h:101
+msgid "Canon HDTV gamma 1.5 Monitor"
+msgstr "Monitor 1,5 Canon HDTV gamma"
+
+#: keystr.h:102
+msgid "Canon HDTV gamma 1.8 Monitor"
+msgstr "Monitor 1,8 Canon HDTV gamma"
+
+#: keystr.h:103
+msgid "Canon HDTV gamma 2.1 Monitor"
+msgstr "Monitor 2,1 Canon HDTV gamma"
+
+#: keystr.h:104
+msgid "Canon HDTV gamma 2.4 Monitor"
+msgstr "Monitor 2,4 Canon HDTV gamma"
+
+#: keystr.h:105
+msgid "Coated 1"
+msgstr "Patinata 1"
+
+#: keystr.h:106
+msgid "Coated 2"
+msgstr "Patinata 2"
+
+#: keystr.h:107
+msgid "Coated 3"
+msgstr "Patinata 3"
+
+#: keystr.h:108
+msgid "Coated 4"
+msgstr "Patinata 4"
+
+#: keystr.h:109
+msgid "Coated Paper 1"
+msgstr "Carta patinata 1"
+
+#: keystr.h:110
+msgid "Coated Paper 2"
+msgstr "Carta patinata 2"
+
+#: keystr.h:111
+msgid "Coated Paper 3"
+msgstr "Carta patinata 3"
+
+#: keystr.h:112
+msgid "Coated Paper 4"
+msgstr "Carta patinata 4"
+
+#: keystr.h:113
+msgid "Coated Paper"
+msgstr "Carta patinata"
+
+#: keystr.h:114
+msgid "Collate "
+msgstr "Fascicola"
+
+#: keystr.h:115
+msgid "Color Paper"
+msgstr "Carta colorata"
+
+#: keystr.h:116
+msgid "Color Tone"
+msgstr "Tono colore"
+
+#: keystr.h:117
+msgid "Color"
+msgstr "Colore"
+
+#: keystr.h:118
+msgid "Colorimetric"
+msgstr "Colorimetrico"
+
+#: keystr.h:119
+msgid "Copy Tray"
+msgstr "Vassoio copia"
+
+#: keystr.h:120
+msgid "Cyan"
+msgstr "Ciano"
+
+#: keystr.h:121
+msgid "Double Parallel Fold"
+msgstr "Piegatura doppia parallela"
+
+#: keystr.h:123
+msgid "Drawer 1 "
+msgstr "Cassetto 1"
+
+#: keystr.h:124
+msgid "Drawer 1"
+msgstr "Cassetto 1"
+
+#: keystr.h:125
+msgid "Drawer 2 "
+msgstr "Cassetto 2"
+
+#: keystr.h:126
+msgid "Drawer 2"
+msgstr "Cassetto 2"
+
+#: keystr.h:127
+msgid "Drawer 3"
+msgstr "Cassetto 3"
+
+#: keystr.h:128
+msgid "Drawer 4"
+msgstr "Cassetto 4"
+
+#: keystr.h:129
+msgid "Drawer 5  "
+msgstr "Cassetto 5  "
+
+#: keystr.h:130
+msgid "Drawer 5 "
+msgstr "Cassetto 5 "
+
+#: keystr.h:131
+msgid "Drawer 5"
+msgstr "Cassetto 5"
+
+#: keystr.h:132
+msgid "Drawer 6"
+msgstr "Cassetto 6"
+
+#: keystr.h:133
+msgid "Drawer 7"
+msgstr "Cassetto 7"
+
+#: keystr.h:134
+msgid "Envelope B5"
+msgstr "Busta B5"
+
+#: keystr.h:135
+msgid "Envelope C5"
+msgstr "Busta C5"
+
+#: keystr.h:136
+msgid "Envelope COM10"
+msgstr "Busta COM10"
+
+#: keystr.h:137
+msgid "Envelope Catalog Glove No.8"
+msgstr "Busta Catalog Glove No.8"
+
+#: keystr.h:138
+msgid "Envelope DL"
+msgstr "Busta DL"
+
+#: keystr.h:139
+msgid "Envelope Feeder "
+msgstr "Alimentatore buste "
+
+#: keystr.h:140
+msgid "Envelope Feeder"
+msgstr "Alimentatore buste"
+
+#: keystr.h:141
+msgid "Envelope H"
+msgstr "Busta H"
+
+#: keystr.h:142
+msgid "Envelope KAKUGATA 2"
+msgstr "Busta KAKUGATA 2"
+
+#: keystr.h:143
+msgid "Envelope KAKUGATA 4"
+msgstr "Busta KAKUGATA 4"
+
+#: keystr.h:144
+msgid "Envelope Monarch"
+msgstr "Busta Monarch"
+
+#: keystr.h:145
+msgid "Envelope NAGAGATA 2"
+msgstr "Busta NAGAGATA 2"
+
+#: keystr.h:146
+msgid "Envelope NAGAGATA 3"
+msgstr "Busta NAGAGATA 3"
+
+#: keystr.h:147
+msgid "Envelope NAGAGATA 3/YOUGATANAGA 3"
+msgstr "Busta NAGAGATA 3/YOUGATANAGA 3"
+
+#: keystr.h:148
+msgid "Envelope No.10 (COM10)"
+msgstr "Busta No.10"
+
+#: keystr.h:149
+msgid "Envelope YOUGATA 2"
+msgstr "Busta YOUGATA 2"
+
+#: keystr.h:150
+msgid "Envelope YOUGATA 4"
+msgstr "Busta YOUGATA 4"
+
+#: keystr.h:151
+msgid "Envelope YOUGATANAGA 3"
+msgstr "Busta YOUGATANAGA 3"
+
+#: keystr.h:152
+msgid "Envelope"
+msgstr "Buste"
+
+#: keystr.h:153
+msgid "Executive"
+msgstr "Executive"
+
+#: keystr.h:154
+msgid "Face Down (Normal Output Order)"
+msgstr "Verso il basso (Ordine di stampa normale)"
+
+#: keystr.h:155
+msgid "Face Down + Landscape"
+msgstr "Verso il basso + orizzontale"
+
+#: keystr.h:156
+msgid "Face Down + Portrait"
+msgstr "Verso il basso + verticale"
+
+#: keystr.h:157
+msgid "Face Up (Reverse Output Order)"
+msgstr "Verso l'alto (Ordine di stampa inverso)"
+
+#: keystr.h:158
+msgid "Face Up + Landscape"
+msgstr "Verso l'alto + orizzontale"
+
+#: keystr.h:159
+msgid "Face Up + Portrait"
+msgstr "Verso l'alto + verticale"
+
+#: keystr.h:160
+msgid "Feed A4/A5/Letter Vertically:"
+msgstr "Alimenta verticalmente A4/A5/Letter:"
+
+#: keystr.h:161
+msgid "Feed A4/Letter Vertically:"
+msgstr "Alimenta verticalmente A4/Letter:"
+
+#: keystr.h:162
+msgid "Feed A5 Vertically:"
+msgstr "Alimenta verticalmente A5:"
+
+#: keystr.h:163
+msgid "Finisher Tray"
+msgstr "Vassoio Finisher"
+
+#: keystr.h:164
+msgid "Finisher-AA1"
+msgstr "Finisher-AA1"
+
+#: keystr.h:165
+msgid "Finisher-AC1"
+msgstr "Finisher-AC1"
+
+#: keystr.h:166
+msgid "Finisher-AD1"
+msgstr "Finisher-AD1"
+
+#: keystr.h:167
+msgid "Finisher-AE1 + Finisher Tray"
+msgstr "Finisher-AE1 + vassoio finisher"
+
+#: keystr.h:168
+msgid "Finisher-AE1"
+msgstr "Finisher-AE1"
+
+#: keystr.h:169
+msgid "Finisher-C1"
+msgstr "Finisher-C1"
+
+#: keystr.h:170
+msgid "Finisher-E1"
+msgstr "Finisher-E1"
+
+#: keystr.h:171
+msgid "Finisher-F1"
+msgstr "Finisher-F1"
+
+#: keystr.h:172
+msgid "Finisher-J1"
+msgstr "Finisher-J1"
+
+#: keystr.h:173
+msgid "Finisher-K1"
+msgstr "Finisher-K1"
+
+#: keystr.h:174
+msgid "Finisher-K2"
+msgstr "Finisher-K2"
+
+#: keystr.h:175
+msgid "Finisher-L1"
+msgstr "Finisher-L1"
+
+#: keystr.h:176
+msgid "Finisher-M1"
+msgstr "Finisher-M1"
+
+#: keystr.h:177
+msgid "Finisher-N1"
+msgstr "Finisher-N1"
+
+#: keystr.h:178
+msgid "Finisher-P1 + Copy Tray"
+msgstr "Finisher-P1 + vassoio copia"
+
+#: keystr.h:179
+msgid "Finisher-P1"
+msgstr "Finisher-P1"
+
+#: keystr.h:180
+msgid "Finisher-Q1"
+msgstr "Finisher-Q1"
+
+#: keystr.h:181
+msgid "Finisher-Q1/Q3"
+msgstr "Finisher-Q1/Q3"
+
+#: keystr.h:182
+msgid "Finisher-Q3 + Finisher Tray"
+msgstr "Finisher-Q3 + vassoio finisher"
+
+#: keystr.h:183
+msgid "Finisher-Q3"
+msgstr "Finisher-Q3"
+
+#: keystr.h:184
+msgid "Finisher-R1 + Finisher Tray"
+msgstr "Finisher-R1 + vassoio finisher"
+
+#: keystr.h:185
+msgid "Finisher-R1"
+msgstr "Finisher-R1"
+
+#: keystr.h:186
+msgid "Finisher-S1 + Copy Tray + Finisher Tray"
+msgstr "Finisher-S1 + vassoio copia + vassoio finisher"
+
+#: keystr.h:187
+msgid "Finisher-S1 + Copy Tray"
+msgstr "Finisher-S1 + vassoio copia"
+
+#: keystr.h:188
+msgid "Finisher-S1 + Finisher Tray"
+msgstr "Finisher-S1 + vassoio finisher"
+
+#: keystr.h:189
+msgid "Finisher-S1"
+msgstr "Finisher-S1"
+
+#: keystr.h:190
+msgid "Finisher-T1"
+msgstr "Finisher-T1"
+
+#: keystr.h:191
+msgid "Finisher-U1"
+msgstr "Finisher-U1"
+
+#: keystr.h:192
+msgid "Finisher-U2 + Finisher Tray"
+msgstr "Finisher-U2 + vassoio finisher"
+
+#: keystr.h:193
+msgid "Finisher-U2"
+msgstr "Finisher-U2"
+
+#: keystr.h:194
+msgid "Finisher-V1/V1L + High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr "Finisher-V1/V1L + fascicolatore ad alta capacità-A1 + raccoglitore-A1"
+
+#: keystr.h:195
+msgid "Finisher-V1/V1L + Perfect Binder-A1"
+msgstr "Finisher-V1/V1L + raccoglitore-A1"
+
+#: keystr.h:196
+msgid "Finisher-V1/V1L"
+msgstr "Finisher-V1/V1L"
+
+#: keystr.h:197
+msgid "Finisher-W1"
+msgstr "Finisher-W1"
+
+#: keystr.h:198
+msgid "Finisher-X1"
+msgstr "Finisher-X1"
+
+#: keystr.h:199
+msgid "Finisher-Y1"
+msgstr "Finisher-Y1"
+
+#: keystr.h:200
+msgid "Finisher-Z1 + Copy Tray"
+msgstr "Finisher-Z1 + vassoio copia"
+
+#: keystr.h:201
+msgid "Finisher-Z1"
+msgstr "Finisher-Z1"
+
+#: keystr.h:202
+msgid "Fold + Saddle Stitch + Trim"
+msgstr "Piegatura + Pinzatura a sella + Ritaglio"
+
+#: keystr.h:203
+msgid "Fold + Saddle Stitch"
+msgstr "Piegatura + Pinzatura a sella"
+
+#: keystr.h:204
+msgid "Fold + Trim"
+msgstr "Piegatura + Ritaglio"
+
+#: keystr.h:205
+msgid "Fold Only"
+msgstr "Solo piegatura"
+
+#: keystr.h:206
+msgid "Foolscap"
+msgstr ""
+
+#: keystr.h:207
+msgid "Full Color"
+msgstr "Tutti i colori"
+
+#: keystr.h:208
+msgid "Glossy 1"
+msgstr "Lucida 1"
+
+#: keystr.h:209
+msgid "Glossy 2"
+msgstr "Lucida 2"
+
+#: keystr.h:210
+msgid "Glossy 3"
+msgstr "Lucida 3"
+
+#: keystr.h:211
+msgid "Glossy 4"
+msgstr "Lucida 4"
+
+#: keystr.h:212
+msgid "Glossy Film"
+msgstr "Lucido"
+
+#: keystr.h:213
+msgid "Glossy Paper"
+msgstr "Carta lucida"
+
+#: keystr.h:214
+msgid "Gradation Priority"
+msgstr "Priorità gradazione"
+
+#: keystr.h:215
+msgid "Gradation"
+msgstr "Gradazione"
+
+#: keystr.h:216
+msgid "Green"
+msgstr "Verde"
+
+#: keystr.h:217
+msgid "Group"
+msgstr "Raggruppa"
+
+#: keystr.h:218
+msgid "Half Fold"
+msgstr "Piegatura a metà"
+
+#: keystr.h:219
+msgid "Halftones:"
+msgstr "Mezzitoni:"
+
+#: keystr.h:220
+msgid "Heavy Paper "
+msgstr "Carta spessa "
+
+#: keystr.h:221
+msgid "Heavy Paper 1"
+msgstr "Carta spessa 1"
+
+#: keystr.h:222
+msgid "Heavy Paper 2"
+msgstr "Carta spessa 2"
+
+#: keystr.h:223
+msgid "Heavy Paper 3"
+msgstr "Carta spessa 3"
+
+#: keystr.h:224
+msgid "Heavy Paper 4"
+msgstr "Carta spessa 4"
+
+#: keystr.h:225
+msgid "Heavy Paper 5"
+msgstr "Carta spessa 5"
+
+#: keystr.h:226
+msgid "Heavy Paper H"
+msgstr "Carta spessa H"
+
+#: keystr.h:227
+msgid "Heavy Paper L "
+msgstr "Carta spessa L "
+
+#: keystr.h:228
+msgid "Heavy Paper L"
+msgstr "Carta spessa L"
+
+#: keystr.h:229
+msgid "Heavy Paper"
+msgstr "Carta spessa"
+
+#: keystr.h:230
+msgid "Heavy/HeavyL"
+msgstr "Spessa/spessa L"
+
+#: keystr.h:231
+msgid "High "
+msgstr "Alto"
+
+#: keystr.h:232
+msgid "High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr "Fascicolatore ad alta capacità-A1 + raccoglitore-A1"
+
+#: keystr.h:233
+msgid "High Capacity Stacker-A1"
+msgstr "Fascicolatore ad alta capacità-A1"
+
+#: keystr.h:234
+msgid "Hold"
+msgstr "Attesa"
+
+#: keystr.h:235
+msgid "Index Card"
+msgstr "Scheda di indice"
+
+#: keystr.h:236
+msgid "Inner 2way Tray + Copy Tray"
+msgstr "Vassoio interno a due vie + vassoio copia"
+
+#: keystr.h:237
+msgid "Inner 2way Tray"
+msgstr "Vassoio interno a due vie"
+
+#: keystr.h:238
+msgid "Inner 2way Tray-C1"
+msgstr "Vassoio interno a due vie-C1"
+
+#: keystr.h:239
+msgid "Inner Finisher-A1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+"Finisher interno-A1 + vassoio copia + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:240
+msgid "Inner Finisher-A1 + Copy Tray"
+msgstr "Finisher interno-A1 + vassoio copia"
+
+#: keystr.h:241
+msgid "Inner Finisher-A1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-A1 + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:242
+msgid "Inner Finisher-A1"
+msgstr "Finisher interno-A1"
+
+#: keystr.h:243
+msgid "Inner Finisher-B1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-B1 + Vassoio aggiuntivo finisher interno"
+
+#: keystr.h:244
+msgid "Inner Finisher-B1"
+msgstr "Finisher interno-B1"
+
+#: keystr.h:245
+msgid "Inner Finisher-C1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+"Finisher interno-C1 + vassoio copia + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:246
+msgid "Inner Finisher-C1 + Copy Tray"
+msgstr "Finisher interno-C1 + vassoio copia"
+
+#: keystr.h:247
+msgid "Inner Finisher-C1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-C1 + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:248
+msgid "Inner Finisher-C1"
+msgstr "Finisher interno-C1"
+
+#: keystr.h:249
+msgid "Inner Finisher-D1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-D1 + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:250
+msgid "Inner Finisher-D1"
+msgstr "Finisher interno-D1"
+
+#: keystr.h:251
+msgid "Inner Finisher-E1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+"Finisher interno-E1 + vassoio copia + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:252
+msgid "Inner Finisher-E1 + Copy Tray"
+msgstr "Finisher interno-E1 + vassoio copia"
+
+#: keystr.h:253
+msgid "Inner Finisher-E1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-E1 + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:254
+msgid "Inner Finisher-E1"
+msgstr "Finisher interno-E1"
+
+#: keystr.h:255
+msgid "Inner Finisher-F1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+"Finisher interno-F1 + vassoio copia + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:256
+msgid "Inner Finisher-F1 + Copy Tray"
+msgstr "Finisher interno-F1 + vassoio copia"
+
+#: keystr.h:257
+msgid "Inner Finisher-F1 + Inner Finisher Additional Tray"
+msgstr "Finisher interno-F1 + vassoio aggiuntivo finisher interno"
+
+#: keystr.h:258
+msgid "Inner Finisher-F1"
+msgstr "Finisher interno-F1"
+
+#: keystr.h:259
+msgid "Inserter 1"
+msgstr "Inseritore 1"
+
+#: keystr.h:260
+msgid "Inserter 2"
+msgstr "Inseritore 2"
+
+#: keystr.h:261
+msgid "Insertion Unit "
+msgstr "Unità di inserimento"
+
+#: keystr.h:262
+msgid "Insertion Unit"
+msgstr "Unità di inserimento"
+
+#: keystr.h:263
+msgid "Labels"
+msgstr "Etichette"
+
+#: keystr.h:264
+msgid "Landscape "
+msgstr "Orizzontale "
+
+#: keystr.h:265
+msgid "Left (Double)"
+msgstr "Sinistra (Doppia)"
+
+#: keystr.h:266
+msgid "Left Binding"
+msgstr "Rilegatura a sinistra"
+
+#: keystr.h:267
+msgid "Legal"
+msgstr "Legal"
+
+#: keystr.h:268
+msgid "Letter"
+msgstr "Letter"
+
+#: keystr.h:269
+msgid "Letterhead (Heavy)"
+msgstr "Intestata (spessa)"
+
+#: keystr.h:270
+msgid "Letterhead (Plain)"
+msgstr "Intestata (comune)"
+
+#: keystr.h:271
+msgid "Letterhead"
+msgstr "Carta intestata"
+
+#: keystr.h:272
+msgid "Long Edge (Bottom)"
+msgstr "Lato lungo (Inferiore)"
+
+#: keystr.h:273
+msgid "Long Edge (Left)"
+msgstr "Lato lungo (Sinistro)"
+
+#: keystr.h:274
+msgid "Long Edge (Right)"
+msgstr "Lato lungo (Destro)"
+
+#: keystr.h:275
+msgid "Long Edge (Top)"
+msgstr "Lato lungo (Superiore)"
+
+#: keystr.h:276
+msgid "Low "
+msgstr "Basso"
+
+#: keystr.h:277
+msgid "Lower Left (Single)"
+msgstr "In basso a sinistra (Singola)"
+
+#: keystr.h:278
+msgid "Lower Right (Single)"
+msgstr "In basso a destra (Singola)"
+
+#: keystr.h:279
+msgid "Magenta"
+msgstr "Magenta"
+
+#: keystr.h:280
+msgid "Medium"
+msgstr "Medio"
+
+#: keystr.h:281
+msgid "Mode 1"
+msgstr "Modalità 1"
+
+#: keystr.h:282
+msgid "Mode 2"
+msgstr "Modalità 2"
+
+#: keystr.h:283
+msgid "Mode 3"
+msgstr "Modalità 3"
+
+#: keystr.h:284
+msgid "Mode 4"
+msgstr "Modalità 4"
+
+#: keystr.h:285
+msgid "Mode 5"
+msgstr "Modalità 5"
+
+#: keystr.h:286
+msgid "Mode 6"
+msgstr "Modalità 6"
+
+#: keystr.h:287
+msgid "Multi Drawer Paper Deck-A1"
+msgstr "Paper deck a più cassetti-A1"
+
+#: keystr.h:288
+msgid "Multi Holes"
+msgstr "Multifori"
+
+#: keystr.h:289
+msgid "Multi Tray-3"
+msgstr "Vassoio multiuso-3"
+
+#: keystr.h:290
+msgid "Multi-purpose Tray "
+msgstr "Vassoio multiuso"
+
+#: keystr.h:291
+msgid "Multi-purpose Tray"
+msgstr "Vassoio multiuso"
+
+#: keystr.h:292
+msgid "Narrow"
+msgstr "Stretto"
+
+#: keystr.h:293
+msgid "No Stapling"
+msgstr "Disattivato"
+
+#: keystr.h:294
+msgid "None "
+msgstr "Nessuno"
+
+#: keystr.h:295
+msgid "None (Solid)"
+msgstr "Nessuno [Compatto]"
+
+#: keystr.h:296
+msgid "Normal"
+msgstr "Normale"
+
+#: keystr.h:297
+msgid "OFF"
+msgstr "Nessuno"
+
+#: keystr.h:298
+msgid "Off  "
+msgstr "Disattivato"
+
+#: keystr.h:299
+msgid "Off "
+msgstr "Disattivato"
+
+#: keystr.h:300
+msgid "Off"
+msgstr "Disattivato"
+
+#: keystr.h:301
+msgid "On "
+msgstr "Attivato"
+
+#: keystr.h:302
+msgid "On"
+msgstr "Attivato"
+
+#: keystr.h:303
+msgid "Only Back Side"
+msgstr "Solo retro"
+
+#: keystr.h:304
+msgid "Only Front Side"
+msgstr "Solo fronte"
+
+#: keystr.h:305
+msgid "Option Tray"
+msgstr "Vassoio opzionale"
+
+#: keystr.h:306
+msgid "Output Tray"
+msgstr "Vassoio di uscita"
+
+#: keystr.h:307
+msgid "POD Deck Lite-A1"
+msgstr "POD deck Lite-A1"
+
+#: keystr.h:308
+msgid "Paper Deck Unit-A1"
+msgstr "Unità Paper deck-A1"
+
+#: keystr.h:309
+msgid "Paper Deck Unit-B1"
+msgstr "Unità Paper deck-B2"
+
+#: keystr.h:310
+msgid "Paper Deck Unit-C1"
+msgstr "Unità Paper deck-C1"
+
+#: keystr.h:311
+msgid "Pattern 1"
+msgstr "Motivo 1"
+
+#: keystr.h:312
+msgid "Pattern 2"
+msgstr "Motivo 2"
+
+#: keystr.h:313
+msgid "Perceptual (Monitor Color Matched)"
+msgstr "Percettivo (Corrispondenza colori monitor)"
+
+#: keystr.h:314
+msgid "Perceptual (Photographic)"
+msgstr "Percettivo (Fotografie) "
+
+#: keystr.h:315
+msgid "Perfect Binder-A1"
+msgstr "Raccoglitore-A1"
+
+#: keystr.h:316
+msgid "Plain Paper 1"
+msgstr "Carta comune 1"
+
+#: keystr.h:317
+msgid "Plain Paper 2"
+msgstr "Carta comune 2"
+
+#: keystr.h:318
+msgid "Plain Paper 3"
+msgstr "Carta comune 3"
+
+#: keystr.h:319
+msgid "Plain Paper H"
+msgstr "Carta comune H"
+
+#: keystr.h:320
+msgid "Plain Paper L "
+msgstr "Carta comune L "
+
+#: keystr.h:321
+msgid "Plain Paper L"
+msgstr "Carta comune L"
+
+#: keystr.h:322
+msgid "Plain Paper L2"
+msgstr "Carta comune L2"
+
+#: keystr.h:323
+msgid "Plain Paper [Heavy]"
+msgstr "Carta comune [spessa]"
+
+#: keystr.h:324
+msgid "Plain Paper [Standard]"
+msgstr "Carta comune [standard]"
+
+#: keystr.h:325
+msgid "Plain Paper [Thin]"
+msgstr "Carta comune [sottile]"
+
+#: keystr.h:326
+msgid "Plain Paper"
+msgstr "Carta comune"
+
+#: keystr.h:327
+msgid "Portrait "
+msgstr "Verticale "
+
+#: keystr.h:328
+msgid "Postcard L"
+msgstr "Cartolina L"
+
+#: keystr.h:329
+msgid "Postcard"
+msgstr "Cartolina"
+
+#: keystr.h:330
+msgid "Pre-punched Paper 1"
+msgstr "Carta preforata 1"
+
+#: keystr.h:331
+msgid "Pre-punched Paper 2"
+msgstr "Carta preforata 2"
+
+#: keystr.h:332
+msgid "Pre-punched Paper"
+msgstr "Carta preforata"
+
+#: keystr.h:333
+msgid "Print"
+msgstr "Stampa"
+
+#: keystr.h:334
+msgid "Printer Default"
+msgstr "Predefinite stampante"
+
+#: keystr.h:335
+msgid "Recycled Paper 1"
+msgstr "Carta riciclata 1"
+
+#: keystr.h:336
+msgid "Recycled Paper 2"
+msgstr "Carta riciclata 2"
+
+#: keystr.h:337
+msgid "Recycled Paper 3"
+msgstr "Carta riciclata 3"
+
+#: keystr.h:338
+msgid "Recycled Paper 4"
+msgstr "Carta riciclata 4"
+
+#: keystr.h:339
+msgid "Recycled Paper"
+msgstr "Carta riciclata"
+
+#: keystr.h:340
+msgid "Red"
+msgstr "Rosso"
+
+#: keystr.h:341
+msgid "Reflective Projector"
+msgstr "Proiettore riflessivo"
+
+#: keystr.h:342
+msgid "Reply Postcard"
+msgstr "Cartolina ric. ritor."
+
+#: keystr.h:343
+msgid "Resolution Priority"
+msgstr "Priorità risoluzione"
+
+#: keystr.h:344
+msgid "Resolution"
+msgstr "Risoluzione"
+
+#: keystr.h:345
+msgid "Right (Double)"
+msgstr "Destra (Doppia)"
+
+#: keystr.h:346
+msgid "Right Binding"
+msgstr "Rilegatura a destra"
+
+#: keystr.h:347
+msgid "Rough Paper 1"
+msgstr "Carta ruvida 1"
+
+#: keystr.h:348
+msgid "Rough Paper 2"
+msgstr "Carta ruvida 2"
+
+#: keystr.h:349
+msgid "Rough Paper 3"
+msgstr "Carta ruvida 3"
+
+#: keystr.h:350
+msgid "Rough Paper"
+msgstr "Carta ruvida"
+
+#: keystr.h:351
+msgid "SRA3"
+msgstr ""
+
+#: keystr.h:352
+msgid "Saddle Finisher-AA2"
+msgstr "Finisher con pinz. a sella-AA2"
+
+#: keystr.h:353
+msgid "Saddle Finisher-AC2"
+msgstr "Finisher con pinz. a sella-AC2"
+
+#: keystr.h:354
+msgid "Saddle Finisher-AD2"
+msgstr "Finisher con pinz. a sella-AD2"
+
+#: keystr.h:355
+msgid "Saddle Finisher-AE2 + Finisher Tray"
+msgstr "Finisher con pinz. a sella-AE2 + vassoio finisher"
+
+#: keystr.h:356
+msgid "Saddle Finisher-AE2"
+msgstr "Finisher con pinz. a sella-AE2"
+
+#: keystr.h:357
+msgid "Saddle Finisher-C2"
+msgstr "Finisher con pinz. a sella-C2"
+
+#: keystr.h:358
+msgid "Saddle Finisher-F2"
+msgstr "Finisher con pinz. a sella-F2"
+
+#: keystr.h:360
+msgid "Saddle Finisher-K3"
+msgstr "Finisher con pinz. a sella-K3"
+
+#: keystr.h:361
+msgid "Saddle Finisher-K3N"
+msgstr "Finisher con pinz. a sella-K3N"
+
+#: keystr.h:362
+msgid "Saddle Finisher-K4"
+msgstr "Finisher con pinz. a sella-K4"
+
+#: keystr.h:363
+msgid "Saddle Finisher-N2"
+msgstr "Finisher con pinz. a sella-N2"
+
+#: keystr.h:364
+msgid "Saddle Finisher-Q2"
+msgstr "Finisher con pinz. a sella-Q2"
+
+#: keystr.h:365
+msgid "Saddle Finisher-Q2/Q4"
+msgstr "Finisher pinz. a sella-Q2/Q4"
+
+#: keystr.h:366
+msgid "Saddle Finisher-Q4 + Finisher Tray"
+msgstr "Finisher con pinz. a sella-Q4 + vassoio finisher"
+
+#: keystr.h:367
+msgid "Saddle Finisher-Q4"
+msgstr "Finisher con pinz. a sella-Q4"
+
+#: keystr.h:368
+msgid "Saddle Finisher-R2 + Finisher Tray"
+msgstr "Finisher con pinz. a sella-R2 + vassoio finisher"
+
+#: keystr.h:369
+msgid "Saddle Finisher-R2"
+msgstr "Finisher con pinz. a sella-R2"
+
+#: keystr.h:370
+msgid "Saddle Finisher-T2"
+msgstr "Finisher con pinz. a sella-T2"
+
+#: keystr.h:371
+msgid "Saddle Finisher-V2/V2L + High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr ""
+"Finisher con pinz. a sella-V2/V2L + fascicolatore ad alta capacità-A1 + "
+"raccoglitore-A1"
+
+#: keystr.h:372
+msgid "Saddle Finisher-V2/V2L + Perfect Binder-A1"
+msgstr "Finisher con pinz. a sella-V2/V2L + raccoglitore-A1"
+
+#: keystr.h:373
+msgid "Saddle Finisher-V2/V2L"
+msgstr "Finisher pinz. a sella-V2/V2L"
+
+#: keystr.h:374
+msgid "Saddle Finisher-W2"
+msgstr "Finisher con pinz. a sella-W2"
+
+#: keystr.h:375
+msgid "Saddle Finisher-Y2"
+msgstr "Finisher con pinz. a sella-Y2"
+
+#: keystr.h:376
+msgid "Saddle Stitch + Trim"
+msgstr "Pinzatura a sella + Ritaglio"
+
+#: keystr.h:377
+msgid "Saddle Stitch"
+msgstr "Pinzatura a sella"
+
+#: keystr.h:378
+msgid "Saturation"
+msgstr "Saturazione"
+
+#: keystr.h:379
+msgid "Secure Printing Function of Device"
+msgstr "Utilizza Funzione Stampa protetta della periferica"
+
+#: keystr.h:381
+msgid "Secured Print"
+msgstr "Stampa protetta"
+
+#: keystr.h:382
+msgid "Shift Tray"
+msgstr "Vassoio basculante"
+
+#: keystr.h:383
+msgid "Short Edge (Bottom)"
+msgstr "Lato corto (Inferiore)"
+
+#: keystr.h:384
+msgid "Short Edge (Left)"
+msgstr "Lato corto (Sinistro)"
+
+#: keystr.h:385
+msgid "Short Edge (Right)"
+msgstr "Lato corto (Destro)"
+
+#: keystr.h:386
+msgid "Short Edge (Top)"
+msgstr "Lato corto (Superiore)"
+
+#: keystr.h:387
+msgid "Side Paper Deck"
+msgstr "Paper deck laterale"
+
+#: keystr.h:388
+msgid "Smooth 1"
+msgstr "Sfumata 1"
+
+#: keystr.h:389
+msgid "Smooth 2"
+msgstr "Sfumata 2"
+
+#: keystr.h:390
+msgid "Special Print Adjustment:"
+msgstr "Regolazione stampa speciale:"
+
+#: keystr.h:391
+msgid "Special Print Mode (Plain Paper):"
+msgstr "Modalità stampa speciale (Carta comune):"
+
+#: keystr.h:393
+msgid "Special Settings 1"
+msgstr "Impostazioni speciali 1"
+
+#: keystr.h:395
+msgid "Special Settings 2"
+msgstr "Impostazioni speciali 2"
+
+#: keystr.h:396
+msgid "Stack Compartment"
+msgstr "Compartimento pila"
+
+#: keystr.h:397
+msgid "Stacker-A1"
+msgstr "Fascicolatore-A1"
+
+#: keystr.h:398
+msgid "Standard"
+msgstr "Normale"
+
+#: keystr.h:399
+msgid "Staple & Collate"
+msgstr "Fascicolazione con pinzatura"
+
+#: keystr.h:400
+msgid "Staple & Group"
+msgstr "Raggruppamento con pinzatura"
+
+#: keystr.h:401
+msgid "Staple Finisher-A1"
+msgstr "Finisher con pinzatura-A1"
+
+#: keystr.h:402
+msgid "Staple Finisher-B1"
+msgstr "Finisher con pinzatura-B1"
+
+#: keystr.h:403
+msgid "Staple Finisher-C1"
+msgstr "Finisher con pinzatura-C1"
+
+#: keystr.h:404
+msgid "Staple Finisher-D1"
+msgstr "Finisher con pinzatura-D1"
+
+#: keystr.h:405
+msgid "Staple Finisher-E1"
+msgstr "Finisher con pinzatura-E1"
+
+#: keystr.h:406
+msgid "Staple Finisher-F1"
+msgstr "Finisher con pinzatura-F1"
+
+#: keystr.h:407
+msgid "Staple Finisher-G1"
+msgstr "Finisher con pinzatura-G1"
+
+#: keystr.h:408
+msgid "Staple Finisher-H1"
+msgstr "Finisher con pinzatura-H1"
+
+#: keystr.h:409
+msgid "Staple Finisher-J1"
+msgstr "Finisher con pinzatura-J1"
+
+#: keystr.h:410
+msgid "Staple Finisher-K1"
+msgstr "Finisher con pinzatura-K1"
+
+#: keystr.h:411
+msgid "Staple Finisher-L1"
+msgstr "Finisher con pinzatura-L1"
+
+#: keystr.h:412
+msgid "Staple Finisher-M1"
+msgstr "Finisher con pinzatura-M1"
+
+#: keystr.h:413
+msgid "Staple Finisher-N1"
+msgstr "Staple Finisher-N1"
+
+#: keystr.h:414
+msgid "Staple Finisher-P1"
+msgstr "Staple Finisher-P1"
+
+#: keystr.h:415
+msgid "Staple Finisher-Q1"
+msgstr "Staple Finisher-Q1"
+
+#: keystr.h:416
+msgid "Staple Finisher-R1"
+msgstr "Staple Finisher-R1"
+
+#: keystr.h:417
+msgid "Staple Finisher-S1"
+msgstr "Staple Finisher-S1"
+
+#: keystr.h:419
+msgid "Stapler Stacker"
+msgstr "Fascicolatore pinzatura"
+
+#: keystr.h:420
+msgid "Statement"
+msgstr "Statement"
+
+#: keystr.h:421
+msgid "Store"
+msgstr "Memorizza"
+
+#: keystr.h:422
+msgid "Sub-output Tray"
+msgstr "Vassoio di uscita secondario"
+
+#: keystr.h:423
+msgid "Tab Paper 1"
+msgstr "Fogli per rubrica 1"
+
+#: keystr.h:424
+msgid "Tab Paper 2"
+msgstr "Fogli per rubrica 2"
+
+#: keystr.h:425
+msgid "Tab Paper"
+msgstr "Fogli per rubrica"
+
+#: keystr.h:426
+msgid "Text Priority"
+msgstr "Priorità testo"
+
+#: keystr.h:427
+msgid "Texture Paper 1"
+msgstr "Carta telata 1"
+
+#: keystr.h:428
+msgid "Texture Paper 2"
+msgstr "Carta telata 2"
+
+#: keystr.h:429
+msgid "Texture Paper 3"
+msgstr "Carta telata 3"
+
+#: keystr.h:430
+msgid "Texture Paper 4"
+msgstr "Carta telata 4"
+
+#: keystr.h:431
+msgid "Texture Paper 5"
+msgstr "Carta telata 5"
+
+#: keystr.h:432
+msgid "Texture Paper 6"
+msgstr "Carta telata 6"
+
+#: keystr.h:433
+msgid "Thin Paper"
+msgstr "Sottile"
+
+#: keystr.h:434
+msgid "Thin"
+msgstr "Sottile"
+
+#: keystr.h:435
+msgid "Toner Save: "
+msgstr "Risparmio toner:"
+
+#: keystr.h:437
+msgid "Top (Double)"
+msgstr "Superiore (Doppia)"
+
+#: keystr.h:438
+msgid "Top Binding"
+msgstr "Rilegatura superiore"
+
+#: keystr.h:439
+msgid "Tracing Paper"
+msgstr "Traslucido"
+
+#: keystr.h:440
+msgid "Tracing"
+msgstr "Traslucido"
+
+#: keystr.h:441
+msgid "Transmissive Projector"
+msgstr "Proiettore trasmittente"
+
+#: keystr.h:442
+msgid "Transparency"
+msgstr "Indicare l'alimentazione dei lucidi"
+
+#: keystr.h:443
+msgid "Tray A"
+msgstr "Vassoio A"
+
+#: keystr.h:444
+msgid "Tray B"
+msgstr "Vassoio B"
+
+#: keystr.h:445
+msgid "Tray C"
+msgstr "Vassoio C"
+
+#: keystr.h:446
+msgid "Two Colors"
+msgstr "Due colori"
+
+#: keystr.h:447
+msgid "Upper Left (Single)"
+msgstr "In alto a sinistra (Singola)"
+
+#: keystr.h:448
+msgid "Upper Right (Single)"
+msgstr "In alto a destra (Singola)"
+
+#: keystr.h:449
+msgid "Use Secure Printing Function of Device"
+msgstr "Utilizza Funzione Stampa protetta della periferica"
+
+#: keystr.h:451
+msgid "Vellum 2"
+msgstr "Pergamenata 2"
+
+#: keystr.h:452
+msgid "Vivid Photo"
+msgstr "Vivid Photo"
+
+#: keystr.h:453
+msgid "Washi (Japanese Paper)"
+msgstr "Washi (carta giapponese)"
+
+#: keystr.h:454
+msgid "Yellow"
+msgstr "Giallo"
+
+#: keystr.h:455
+msgid "Z-fold"
+msgstr "Piegatura a Z"
+
+#: keystr.h:456
+#, c-format
+msgid "in (0.0 to %.1f)"
+msgstr "in (0 to %.1f)"
+
+#: keystr.h:457
+#, c-format
+msgid "mm (%.1f to %.1f) "
+msgstr "mm (%.1f a %.1f)"
+
+#: keystr.h:458
+#, c-format
+msgid "mm (%.1f to %.1f)"
+msgstr "mm (%.1f a %.1f)"
+
+#: keystr.h:459
+#, c-format
+msgid "mm (%.2f to %.2f)"
+msgstr "mm (%.2f a %.2f)"
+
+#: keystr.h:460
+#, c-format
+msgid "mm (%d to %d)"
+msgstr "mm (%d a %d)"
+
+#: keystr.h:461
+#, c-format
+msgid "mm (0 to %d)"
+msgstr "mm (0 a %d)"
+
+#: keystr.h:462
+msgid "sRGB v1.20 (Canon)"
+msgstr ""
+
+#: keystr.h:463
+msgid "sRGB v3.0 (Canon)"
+msgstr ""
+
+#~ msgid "Use Trimmer"
+#~ msgstr "Utilizza Trimmer"
+
+#~ msgid "Image Special Process:"
+#~ msgstr "Processo immagine speciale:"
+
+#~ msgid "Gray Compensation:"
+#~ msgstr "Compensazione grigio:"
+
+#~ msgid "Gradation Smoothing:"
+#~ msgstr "Sfumata gradazione:"
+
+#~ msgid "Image Compression:"
+#~ msgstr "Compressione immagine:"
+
+#~ msgid "Spot Color Matching:"
+#~ msgstr "Priorità corrispondenza colori applicazione:"
+
+#~ msgid "Light"
+#~ msgstr "Chiaro"
+
+#~ msgid "Dark"
+#~ msgstr "Scuro"
+
+#~ msgid "Toner Density"
+#~ msgstr "Densità toner"
+
+#~ msgid "Black:"
+#~ msgstr "Nero:"
+
+#~ msgid "Yellow:"
+#~ msgstr "Giallo:"
+
+#~ msgid "Magenta:"
+#~ msgstr "Magenta:"
+
+#~ msgid "Cyan:"
+#~ msgstr "Ciano:"
+
+#~ msgid "Use Toner Save"
+#~ msgstr "Risparmio toner"
+
+#~ msgid "Use Pure Black:"
+#~ msgstr "Usa solo nero:"
+
+#~ msgid "High"
+#~ msgstr "Alta"
+
+#~ msgid "Low"
+#~ msgstr "Bassa"
+
+#~ msgid "Setting"
+#~ msgstr "Impostazioni"
+
+#~ msgid "Duplex Unit"
+#~ msgstr "Unità fronte/retro"
+
+#~ msgid "Device Setting"
+#~ msgstr "Impostazione periferica"
+
+#~ msgid "Collate"
+#~ msgstr "Fascicola"
+
+#~ msgid " Finishing "
+#~ msgstr "Finitura"
+
+#~ msgid "Pattern 3"
+#~ msgstr "Motivo 3"
+
+#~ msgid " Quality "
+#~ msgstr "Qualità"
+
+#~ msgid "Image Refinement"
+#~ msgstr "Miglioramento immagine"
+
+#~ msgid "Detailed Settings"
+#~ msgstr "Impostazioni dettagliate"
+
+#~ msgid "Paper/Quality"
+#~ msgstr "Carta/qualità"
+
+#~ msgid "Filter:"
+#~ msgstr "Filtro:"
+
+#~ msgid "Filter"
+#~ msgstr "Filtro"
+
+#~ msgid "Detect Paper Size"
+#~ msgstr "Rileva formato carta"
+
+#~ msgid "Rotate Print Data 180 Degrees"
+#~ msgstr "Ruota-fascicola"
+
+#~ msgid "Use Skip Blank Pages Mode"
+#~ msgstr "Usa modalità Salta pagine vuote"
+
+#~ msgid "Image Refinement: "
+#~ msgstr "Miglioramento immagine:"
+
+#~ msgid "Fixing Mode:"
+#~ msgstr "Modalità di fissaggio:"
+
+#~ msgid "Fixing Correction for Postcards:"
+#~ msgstr "Correzione fissaggio per cartoline:"
+
+#~ msgid "Wrinkles Correction at Output:"
+#~ msgstr "Correzione arricciamenti in stampa:"
+
+#~ msgid "Print on the Back of Printed Paper from the Multi-purpose Tray"
+#~ msgstr "Stampa sul retro della carta stampata dal vassoio multiuso"
+
+#~ msgid "Paper Curl Correction at Output:"
+#~ msgstr "Correzione curvatura carta in stampa:"
+
+#~ msgid "Job Note:"
+#~ msgstr "Nota processo:"
+
+#~ msgid "Details:"
+#~ msgstr "Dettagli:"
+
+#~ msgid "Pure Black Text:"
+#~ msgstr "Solo testo nero:"
+
+#~ msgid "Black Overprint:"
+#~ msgstr "Sovrastampa nero:"
+
+#~ msgid "Pure Black Process"
+#~ msgstr "Processo solo nero"
+
+#~ msgid "Simulation Profile:"
+#~ msgstr "Profilo simulazione:"
+
+#~ msgid "Use Grayscale Profile"
+#~ msgstr "Utilizza profilo scala di grigi"
+
+#~ msgid "Grayscale"
+#~ msgstr "Scala di grigi"
+
+#~ msgid "Output Profile:"
+#~ msgstr "Profilo di stampa:"
+
+#~ msgid "Name:  "
+#~ msgstr "Nome:"
+
+#~ msgid "Ledger"
+#~ msgstr "11x17"
+
+#~ msgid "Manual"
+#~ msgstr "Manuale"
+
+#~ msgid "Cassette 1"
+#~ msgstr "Cassetto 1"
+
+#~ msgid "Cassette 2"
+#~ msgstr "Cassetto 2"
+
+#~ msgid "Cassette 3"
+#~ msgstr "Cassetto 3"
+
+#~ msgid "Cassette 4"
+#~ msgstr "Cassetto 4"
+
+#~ msgid "Cassette 5"
+#~ msgstr "Cassetto 5"
+
+#~ msgid "Cassette 6"
+#~ msgstr "Cassetto 6"
+
+#~ msgid "Auto "
+#~ msgstr "Auto"
+
+#~ msgid "Manual "
+#~ msgstr "Manuale"
+
+#~ msgid "Plain Paper H "
+#~ msgstr "Carta comune H "
+
+#~ msgid "Heavy Paper 3 "
+#~ msgstr "Carta spessa 3 "
+
+#~ msgid "Postcard H"
+#~ msgstr "Cartolina H"
+
+#~ msgid "Vellum 1"
+#~ msgstr "Pergamenata 1"
+
+#~ msgid "Label"
+#~ msgstr "Etichetta"
+
+#~ msgid "Envelope L"
+#~ msgstr "Busta L"
+
+#~ msgid "Finisher-N2"
+#~ msgstr "Finisher-N2"
+
+#~ msgid "High Resolution"
+#~ msgstr "Alta risoluzione"
+
+#~ msgid "Error Diffusion"
+#~ msgstr "Diffusione errori"
+
+#~ msgid "Pattern 4"
+#~ msgstr "Motivo 4"
+
+#~ msgid "Pattern 5"
+#~ msgstr "Motivo 5"
+
+#~ msgid "Pattern 6"
+#~ msgstr "Motivo 6"
+
+#~ msgid "Pattern 7"
+#~ msgstr "Motivo 7"
+
+#~ msgid "[1 to %d]"
+#~ msgstr "[1 a %d]"
+
+#~ msgid "(1 to %d)"
+#~ msgstr "(1 a %d)"
+
+#~ msgid "Level 1"
+#~ msgstr "Livello 1"
+
+#~ msgid "Level 2"
+#~ msgstr "Livello 2"
+
+#~ msgid "250 Sheet Drawer"
+#~ msgstr "Cassetto da 250 fogli"
+
+#~ msgid "250 Sheet Drawer x 2"
+#~ msgstr "Cassetto da 250 fogli x 2"
+
+#~ msgid "250 Sheet Drawer x 3"
+#~ msgstr "Cassetto da 250 fogli x 3"
+
+#~ msgid "500 Sheet Drawer"
+#~ msgstr "Cassetto da 500 fogli"
+
+#~ msgid "500 Sheet Cassette"
+#~ msgstr "Cassetto da 500 fogli"
+
+#~ msgid "500 Sheet Cassette x 2"
+#~ msgstr "Cassetto da 500 fogli x 2"
+
+#~ msgid "500 Sheet Cassette x 3"
+#~ msgstr "Cassetto da 500 fogli x 3"
+
+#~ msgid "Always"
+#~ msgstr "Tutte"
+
+#~ msgid "Never"
+#~ msgstr "Disattivato"
+
+#~ msgid "Print on the Other Side"
+#~ msgstr "Stampa sull'altro lato"
+
+#~ msgid "Perceptual"
+#~ msgstr "Percettivo"
+
+#~ msgid "Detect Paper Size in Cassette"
+#~ msgstr "Rileva formato carta nel cassetto"
+
+#~ msgid "Drawer1"
+#~ msgstr "Cassetto 1"
+
+#~ msgid "Drawer2"
+#~ msgstr "Cassetto 2"
+
+#~ msgid "Drawer3"
+#~ msgstr "Cassetto 3"
+
+#~ msgid "Drawer4"
+#~ msgstr "Cassetto 4"
+
+#~ msgid "Special Settings 3"
+#~ msgstr "Impostazioni speciali 3"
+
+#~ msgid "Special Settings 4"
+#~ msgstr "Impostazioni speciali 4"
+
+#~ msgid "Special Settings 5"
+#~ msgstr "Impostazioni speciali 5"
+
+#~ msgid "Special Settings 6"
+#~ msgstr "Impostazioni speciali 6"
+
+#~ msgid "Special Settings 7"
+#~ msgstr "Impostazioni speciali 7"
+
+#~ msgid "Special Settings 8"
+#~ msgstr "Impostazioni speciali 8"
+
+#~ msgid "Special Settings 9"
+#~ msgstr "Impostazioni speciali 9"
+
+#~ msgid "Special Settings 10"
+#~ msgstr "Impostazioni speciali 10"
+
+#~ msgid "Special Settings 11"
+#~ msgstr "Impostazioni speciali 11"
+
+#~ msgid "Special Settings 12"
+#~ msgstr "Impostazioni speciali 12"
+
+#~ msgid "Special Settings 13"
+#~ msgstr "Impostazioni speciali 13"
+
+#~ msgid "Special Settings 14"
+#~ msgstr "Impostazioni speciali 14"
+
+#~ msgid "Special Settings 15"
+#~ msgstr "Impostazioni speciali 15"
+
+#~ msgid "Front Side Correction(Minus Curl)"
+#~ msgstr "Correzione lato anteriore (meno curv.)"
+
+#~ msgid "Back Side Correction(Plus Curl)"
+#~ msgstr "Correzione lato posteriore (più curv.)"
+
+#~ msgid "Image Priority"
+#~ msgstr "Priorità qualità"
+
+#~ msgid "Speed Priority"
+#~ msgstr "Priorità velocità"
+
+#~ msgid "Level 3"
+#~ msgstr "Livello 3"
+
+#~ msgid "Special Settings A1"
+#~ msgstr "Impostazioni speciali A1"
+
+#~ msgid "Special Settings A2"
+#~ msgstr "Impostazioni speciali A2"
+
+#~ msgid "Special Settings A5"
+#~ msgstr "Impostazioni speciali A5"
+
+#~ msgid "Special Settings B4"
+#~ msgstr "Impostazioni speciali B4"
+
+#~ msgid "Special Settings B5"
+#~ msgstr "Impostazioni speciali B5"
+
+#~ msgid "Special Settings B6"
+#~ msgstr "Impostazioni speciali B6"
+
+#~ msgid "Special Settings C1"
+#~ msgstr "Impostazioni speciali C1"
+
+#~ msgid "Special Settings C2"
+#~ msgstr "Impostazioni speciali C2"
+
+#~ msgid "Special Settings C3"
+#~ msgstr "Impostazioni speciali C3"
+
+#~ msgid "Special Settings C4"
+#~ msgstr "Impostazioni speciali C4"
+
+#~ msgid "Special Settings C7"
+#~ msgstr "Impostazioni speciali C7"
+
+#~ msgid "Special Settings D1"
+#~ msgstr "Impostazioni speciali D1"
+
+#~ msgid "Special Settings E1"
+#~ msgstr "Impostazioni speciali E1"
+
+#~ msgid "Special Settings G2"
+#~ msgstr "Impostazioni speciali G2"
+
+#~ msgid "Special Settings H1"
+#~ msgstr "Impostazioni speciali H1"
+
+#~ msgid "Special Settings H7"
+#~ msgstr "Impostazioni speciali H7"
+
+#~ msgid "Special Settings J2"
+#~ msgstr "Impostazioni speciali J2"
+
+#~ msgid "Service Settings"
+#~ msgstr "Impostazioni di servizio"
+
+#~ msgid "Detect Paper Size When 1-sided Printing is Set"
+#~ msgstr "Rileva formato carta se è selezionata Stampa su un lato"
+
+#~ msgid "250 Sheet Cassette"
+#~ msgstr "Cassetto da 250 fogli"
+
+#~ msgid "Finisher-AB1"
+#~ msgstr "Finisher-AB1"
+
+#~ msgid "Saddle Finisher-AB2"
+#~ msgstr "Finisher con pinz. a sella-AB2"
+
+#~ msgid "On   "
+#~ msgstr "Attivato"
+
+#~ msgid "Off   "
+#~ msgstr "Disattivato"
+
+#~ msgid "550 Sheet Cassette"
+#~ msgstr "Cassetto da 550 fogli"
+
+#~ msgid "550 Sheet Cassette x 2"
+#~ msgstr "Cassetto da 550 fogli x 2"
+
+#~ msgid "550 Sheet Cassette x 3"
+#~ msgstr "Cassetto da 550 fogli x 3"
+
+#~ msgid "Device Type:"
+#~ msgstr "Tipo periferica:"
+
+#~ msgid "Standard "
+#~ msgstr "Normale "
+
+#~ msgid "Toner Density (Black):"
+#~ msgstr "Densità toner (Nero):"
+
+#~ msgid "Toner Density (Cyan):"
+#~ msgstr "Densità toner (Ciano):"
+
+#~ msgid "Toner Density (Magenta):"
+#~ msgstr "Densità toner (Magenta):"
+
+#~ msgid "Toner Density (Yellow):"
+#~ msgstr "Densità toner (Giallo):"
+
+#~ msgid "Detect Paper Size in Multi-purpose Tray"
+#~ msgstr "Rileva formato carta nel vassoio multiuso"
+
+#~ msgid "Special Print Mode A:"
+#~ msgstr "Modalità stampa speciale A:"
+
+#~ msgid "Special Print Mode B:"
+#~ msgstr "Modalità stampa speciale B:"
+
+#~ msgid "Print Image Adjustment:"
+#~ msgstr "Regolazione immagine stampa:"
+
+#~ msgid "Standard Drawer x 1 + Optional 250 Sheet Drawer x 3"
+#~ msgstr "Cassetto standard x 1 + Cassetto da 250 fogli opzionale x 3"
+
+#~ msgid "Standard Drawer x 2 + Optional 250 Sheet Drawer x 2"
+#~ msgstr "Cassetto standard x 2 + Cassetto da 250 fogli opzionale x 2"
+
+#~ msgid "Special Settings A6"
+#~ msgstr "Impostazioni speciali A6"
+
+#~ msgid "Special Settings D2"
+#~ msgstr "Impostazioni speciali D2"
+
+#~ msgid "Special Settings D3"
+#~ msgstr "Impostazioni speciali D3"
+
+#~ msgid "Special Settings D7"
+#~ msgstr "Impostazioni speciali D7"
+
+#~ msgid "Special Settings H2"
+#~ msgstr "Impostazioni speciali H2"
+
+#~ msgid "Special Settings I1"
+#~ msgstr "Impostazioni speciali I1"
+
+#~ msgid "Special Settings J5"
+#~ msgstr "Impostazioni speciali J5"
+
+#~ msgid "Special Settings J6"
+#~ msgstr "Impostazioni speciali J6"
+
+#~ msgid "Stacker a (Stack)"
+#~ msgstr "Fascicolatore a (Pila)"
+
+#~ msgid "Stacker b (Stack)"
+#~ msgstr "Fascicolatore b (Pila)"
+
+#~ msgid "Stacker a (Output Tray)"
+#~ msgstr "Fascicolatore a (Vassoio di uscita)"
+
+#~ msgid "Stacker b (Output Tray)"
+#~ msgstr "Fascicolatore b (Vassoio di uscita)"
+
+#~ msgid "Auto Change (from Stack of Stacker a)"
+#~ msgstr "Cambia automaticamente (dalla pila Fascicolatore a)"
+
+#~ msgid "Auto Change (from Stack of Stacker b)"
+#~ msgstr "Cambia automaticamente (dalla pila Fascicolatore b)"
+
+#~ msgid "Heavy Paper 6"
+#~ msgstr "Carta spessa 6"
+
+#~ msgid "Thin 1"
+#~ msgstr "Sottile 1"
+
+#~ msgid "Thin 2"
+#~ msgstr "Sottile 2"
+
+#~ msgid "1-sided Coated 6"
+#~ msgstr "Patinata su un lato 6"
+
+#~ msgid "2-sided Coated 6"
+#~ msgstr "Patinata fronte/retro 6"
+
+#~ msgid "Texture Paper 7"
+#~ msgstr "Carta telata 7"
+
+#~ msgid "Carbonless"
+#~ msgstr "Senza carbonio"
+
+#~ msgid "High Capacity Stacker-E1"
+#~ msgstr "High Capacity Stacker-E1"
+
+#~ msgid "High Capacity Stacker-E1 x 2"
+#~ msgstr "High Capacity Stacker-E1 x 2"
+
+#~ msgid "Finisher-AF1 + High Capacity Stacker-E1"
+#~ msgstr "Finisher-AF1 + High Capacity Stacker-E1"
+
+#~ msgid "Finisher-AK1 + High Capacity Stacker-E1"
+#~ msgstr "Finisher-AK1 + High Capacity Stacker-E1"
+
+#~ msgid "Saddle Finisher-AF2 + High Capacity Stacker-E1"
+#~ msgstr "Saddle Finisher-AF2 + High Capacity Stacker-E1"
+
+#~ msgid "Saddle Finisher-AK2 + High Capacity Stacker-E1"
+#~ msgstr "Saddle Finisher-AK2 + High Capacity Stacker-E1"
+
+#~ msgid "Finisher-AF1 + High Capacity Stacker-E1 x 2"
+#~ msgstr "Finisher-AF1 + High Capacity Stacker-E1 x 2"
+
+#~ msgid "Finisher-AK1 + High Capacity Stacker-E1 x 2"
+#~ msgstr "Finisher-AK1 + High Capacity Stacker-E1 x 2"
+
+#~ msgid "Saddle Finisher-AF2 + High Capacity Stacker-E1 x 2"
+#~ msgstr "Saddle Finisher-AF2 + High Capacity Stacker-E1 x 2"
+
+#~ msgid "Saddle Finisher-AK2 + High Capacity Stacker-E1 x 2"
+#~ msgstr "Saddle Finisher-AK2 + High Capacity Stacker-E1 x 2"
+
+#~ msgid "Finisher-AK1"
+#~ msgstr "Finisher-AK1"
+
+#~ msgid "Saddle Finisher-AK2"
+#~ msgstr "Saddle Finisher-AK2"
+
+#~ msgid "Finisher-AF1"
+#~ msgstr "Finisher-AF1"
+
+#~ msgid "Saddle Finisher-AF2"
+#~ msgstr "Finisher con pinz. a sella AF2"

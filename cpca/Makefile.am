@@ -1,0 +1,3 @@
+SUBDIRS = cnpklib
+
+ACLOCAL_AMFLAGS = -I m4

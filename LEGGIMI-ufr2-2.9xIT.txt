@@ -1,0 +1,1157 @@
+================================================================================
+Canon UFR II Printer Driver Version 2.90 for Linux
+
+LEGGERE ATTENTAMENTE QUESTO DOCUMENTO
+================================================================================
+
+
+--------------------------------------------------------------------------------
+Marchi
+
+Adobe, Acrobat, Acrobat Reader, PostScript e PostScript 3 sono marchi di Adobe 
+Systems Incorporated.
+Linux è un marchio di Linus Torvalds.
+OpenOffice.org and the seagull logo are registered trademarks of The Apache 
+Software Foundation.
+HP-GL è un marchio di Hewlett-Packard Company.
+UNIX è un marchio di The Open Group negli Stati Uniti e/o in altri paesi.
+Altri nomi di prodotti o società contenuti in questo documento sono marchi dei 
+rispettivi proprietari.
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+SOMMARIO
+
+Prima di iniziare
+1. Introduzione
+2. Struttura dei file di distribuzione di Canon UFR II Printer Driver for Linux
+3. Requisiti hardware
+4. Precauzioni, limitazioni e restrizioni
+--------------------------------------------------------------------------------
+
+
+1. Introduzione ----------------------------------------------------------------
+Grazie per aver scelto Canon UFR II/UFR II LT Printer Driver for Linux. Il 
+driver della stampante offre funzioni di stampa per le stampanti della serie 
+Canon LBP/imageRUNNER ADVANCE/Color imageRUNNER/imageRUNNER/imagePRESS/MF in 
+ambiente CUPS (Common Unix Printing System), un sistema di stampa disponibile 
+nei sistemi operativi Linux.
+
+2. Struttura dei file di distribuzione di Canon UFR II Printer Driver for 
+   Linux -----
+Di seguito sono elencati i file di distribuzione di Canon UFR II Printer Driver 
+for Linux:
+Il nome del file del modulo del driver della stampante e del modulo comune del 
+driver CUPS varia in base alla versione.
+
+- LEGGIMI-ufr2-2.9xIT.txt (questo documento)
+Contiene informazioni aggiuntive su Canon UFR II Printer Driver for Linux.
+
+- LICENSE-ufr2drv-2.9x.txt
+Contiene il documento User License Agreement relativo a Canon UFR II Printer 
+Driver for Linux.
+
+- guide-ufr2-2.9xIT.tar.gz
+Manuale in linea che spiega come utilizzare Canon UFR II Printer Driver for 
+Linux.
+In questo documento sono descritti i requisiti di sistema, le procedure di 
+installazione e l'utilizzo di Canon UFR II Printer Driver for Linux.
+Poiché il file è in formato compresso, per poterlo leggere è necessario estrarlo
+nella directory appropriata.
+
+- cndrvcups-common-2.90-X.i386.rpm (per sistemi a 32 bit)
+- cndrvcups-common-2.90-X.x86_64.rpm (per sistemi a 64 bit)
+- cndrvcups-common_2.90-X_i386.deb (per Debian a 32 bit)
+- cndrvcups-common_2.90-X_amd64.deb (per Debian a 64 bit) 
+Pacchetto di installazione relativo al modulo comune del driver CUPS utilizzato 
+da Canon UFR II Printer Driver for Linux.
+
+- cndrvcups-ufr2-it-2.90-X.i386.rpm (per sistemi a 32 bit)
+- cndrvcups-ufr2-it-2.90-X.x86_64.rpm (per sistemi a 64 bit)
+- cndrvcups-ufr2-it_2.90-X_i386.deb (per Debian a 32 bit)
+- cndrvcups-ufr2-it_2.90-X_amd64.deb (per Debian a 64 bit)
+Pacchetto di installazione relativo a Canon UFR II Printer Driver for Linux.
+
+- cndrvcups-common-2.90-X.tar.gz
+File di origine relativo al modulo comune del driver CUPS utilizzato da Canon 
+UFR II Printer Driver for Linux.
+
+- cndrvcups-lb-2.90-X.tar.gz
+File di origine relativo a Canon UFR II Printer Driver for Linux.
+
+
+3. Requisiti hardware ---------------------------------------------------------
+È possibile utilizzare questo driver per stampante nell'ambiente hardware 
+seguente.
+
+Hardware:
+Computer in grado di eseguire Linux, con CPU x86 compatibile (a 32 bit o 64 bit)
+
+Sistemi operativi valutati:
+  Fedora 20 32 bit/64 bit
+  Ubuntu 13.10 Desktop 32 bit/64 bit
+
+Sistemi operativi valutati in precedenza:
+  Turbolinux 10 Desktop 32 bit
+  Turbolinux 10 F... 32 bit
+  Turbolinux 10 S 32 bit
+  Turbolinux Version 11 FUJI 32 bit
+  Turbolinux Home 32 bit
+  Turbolinux 10 Server x64 Edition 64 bit
+  MIRACLE LINUX V3.0 (Asianux Inside) 32 bit/64 bit
+  MIRACLE LINUX V4.0 (Asianux Inside) 32 bit/64 bit
+  Red Hat 9 32 bit
+  Red Hat Professional Workstation 32 bit
+  Red Hat Enterprise Linux v.4 32 bit/64 bit
+  Red Hat Enterprise Linux v.5 32 bit/64 bit
+  Mandriva Linux One 2008 32 bit
+  Mandriva Linux One 2008 Spring 32 bit
+  Mandriva Linux PowerPack 2008 32 bit/64 bit
+  Mandriva Linux PowerPack 2008 Spring 32 bit/64 bit
+  Mandriva Linux One 2009 32 bit
+  SUSE LINUX PROFESSIONAL 9.3 32 bit
+  Novell Linux Desktop 9 32 bit
+  SUSE Linux 10.0 (openSUSE) 32 bit/64 bit
+  SUSE Linux 10.1 (openSUSE) 32 bit/64 bit
+  SUSE Linux 10.2 (openSUSE) 32 bit/64 bit
+  SUSE Linux 10.3 (openSUSE) 32 bit/64 bit
+  SUSE Linux 11.0 (openSUSE) 32 bit/64 bit
+  SUSE Linux 11.1 (openSUSE) 32 bit/64 bit
+  Fedora Core 4 32 bit/64 bit
+  Fedora Core 5 32 bit/64 bit
+  Fedora Core 6 32 bit/64 bit
+  Fedora 7 32 bit/64 bit
+  Fedora 8 32 bit/64 bit
+  Fedora 9 32 bit/64 bit
+  Fedora 10 32 bit/64 bit
+  Fedora 11 32 bit/64 bit
+  Fedora 12 32 bit/64 bit
+  Fedora 13 32 bit/64 bit
+  Fedora 14 32 bit/64 bit
+  Fedora 15 32 bit/64 bit
+  Fedora 16 32 bit/64 bit
+  Fedora 17 32 bit/64 bit
+  Fedora 18 32 bit/64 bit
+  Fedora 19 32 bit/64 bit
+  Ubuntu 7.04 Desktop 32 bit
+  Ubuntu 7.10 Desktop 32 bit
+  Ubuntu 8.04 Desktop 32 bit
+  Ubuntu 8.10 Desktop 32 bit
+  Ubuntu 9.04 Desktop 32 bit
+  Ubuntu 9.10 Desktop 32 bit
+  Ubuntu 10.04 Desktop 32 bit
+  Ubuntu 10.10 Desktop 32 bit
+  Ubuntu 11.04 Desktop 32 bit
+  Ubuntu 11.10 Desktop 32 bit
+  Ubuntu 12.04 Desktop 32 bit/64 bit
+  Ubuntu 12.10 Desktop 32 bit/64 bit
+  Ubuntu 13.04 Desktop 32 bit/64 bit
+  Debian GNU/Linux 3.1 rev2 32 bit
+  Debian GNU/Linux 4.0 32 bit
+  Debian GNU/Linux 4.0r6 etchnhalf 32 bit
+  Debian GNU/Linux 5.02 32 bit
+  Vine Linux 3.1/3.1CR 32 bit
+  Vine Linux 4.1 32 bit
+  Vine Linux 4.2 32 bit
+  CentOS 5.3 32 bit/64 bit
+
+- Stampante supportata
+Canon UFR II Printer Driver for Linux supporta i seguenti prodotti Canon. Vedere
+il seguente elenco per trovare il file PPD e l'ambiente di comunicazione 
+corrispondente alla stampante in uso.
+* I modelli di stampanti con "A" e "A*" dopo il nome nella colonna "BIDI 
+(bidirezionale)" richiedono collegamenti di stampa bidirezionali. I modelli di 
+stampante con "A*" utilizzano la stampa unidirezionale se collegati tramite USB.
+* I modelli di stampanti con "A" dopo il nome nella colonna "IPv6" supportano il
+protocollo IPv6.
+
+  Canon LBP3360 UFR II (CNCUPSLBP3360ZK.ppd)
+  LBP3360 (BIDI: -, IPv6: -)
+
+  Canon LBP3370 UFR II (CNCUPSLBP3370ZK.ppd)
+  LBP3370 (BIDI: -, IPv6: -)
+
+  Canon LBP3460 UFR II (CNCUPSLBP3460ZK.ppd)
+  LBP3460 (BIDI: -, IPv6: -)
+
+  Canon LBP5360 UFR II (CNCUPSLBP5360ZK.ppd)
+  LBP5360 (BIDI: -, IPv6: -)
+
+  Canon LBP5960 UFR II (CNCUPSLBP5960ZK.ppd)
+  LBP5960 (BIDI: -, IPv6: -)
+
+  Canon LBP5970/5975 UFR II (CNCUPSLBP5975ZK.ppd)
+  LBP5970/5975 (BIDI: -, IPv6: -)
+
+  Canon LBP6650 UFR II (CNCUPSLBP6650ZK.ppd)
+  LBP6650dn (BIDI: -, IPv6: A)
+
+  Canon LBP6670 UFR II (CNCUPSLBP6670ZK.ppd)
+  LBP6670dn (BIDI: -, IPv6: A)
+
+  Canon LBP6680/3480 UFR II (CNCUPSLBP6680ZK.ppd)
+  LBP6680x (BIDI: -, IPv6: A)
+
+  Canon LBP6750/3560 UFR II (CNCUPSLBP6750ZK.ppd)
+  LBP6750/3560 (BIDI: -, IPv6: -)
+
+  Canon LBP6780/3580 UFR II (CNCUPSLBP6780ZK.ppd)
+  LBP6780/3580 (BIDI: -, IPv6: -)
+
+  Canon LBP7660C UFR II (CNCUPSLBP7660CZK.ppd)
+  LBP7660C (BIDI: -, IPv6: A)
+
+  Canon LBP7680C/5280 UFR II (CNCUPSLBP7680CZK.ppd)
+  LBP7680C/5280 (BIDI: -, IPv6: A)
+
+  Canon LBP7750C/5460 UFR II (CNCUPSLBP7750CZK.ppd)
+  LBP7750C (BIDI: -, IPv6: -)
+
+  Canon LBP7780C/5480 UFR II (CNCUPSLBP7780CZK.ppd)
+  LBP7780C/5480 (BIDI: -, IPv6: -)
+
+  Canon LBP8780 UFR II (CNCUPSLBP8780ZK.ppd)
+  LBP8780 (BIDI: -, IPv6: A)
+
+  Canon LBP8750 UFR II (CNCUPSLBP8750ZK.ppd)
+  LBP8750 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C250/350 UFR II (CNCUPSIRADVC350ZK.ppd)
+  imageRUNNER ADVANCE C250i/C350i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C351 UFR II (CNCUPSIRADVC351ZK.ppd)
+  imageRUNNER ADVANCE C351iF (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2020/2030 UFR II (CNCUPSIRADVC2030ZK.ppd)
+  imageRUNNER ADVANCE C2020/C2030 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2020i/2030i UFR II (CNCUPSIRADVC2030IZK.ppd)
+  imageRUNNER ADVANCE C2020i/C2030i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2020L/2030L UFR II (CNCUPSIRADVC2030LZK.ppd)
+  imageRUNNER ADVANCE C2020L/C2030L (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2025 UFR II (CNCUPSIRADVC2025ZK.ppd)
+  imageRUNNER ADVANCE C2025 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2220/2230 UFR II (CNCUPSIRADVC2230ZK.ppd)
+  imageRUNNER ADVANCE C2220/C2230 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C2225 UFR II (CNCUPSIRADVC2225ZK.ppd)
+  imageRUNNER ADVANCE C2225 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C5030/5035 UFR II (CNCUPSIRADVC5035ZK.ppd)
+  imageRUNNER ADVANCE C5030/C5030i/C5035/C5035i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C5045/5051 UFR II (CNCUPSIRADVC5051ZK.ppd)
+  imageRUNNER ADVANCE C5045/C5045i/C5051/C5051i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C5235/5240 UFR II (CNCUPSIRADVC5240ZK.ppd)
+  imageRUNNER ADVANCE C5235/C5235i/C5240/C5240i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C5250/5255 UFR II (CNCUPSIRADVC5255ZK.ppd)
+  imageRUNNER ADVANCE C5250/C5250i/C5255/C5255i (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C7055/7065 UFR II (CNCUPSIRADVC7065ZK.ppd)
+  imageRUNNER ADVANCE C7055/C7065 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C7260/7270 UFR II (CNCUPSIRADVC7270ZK.ppd)
+  imageRUNNER ADVANCE C7260/C7270 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C7280 UFR II (CNCUPSIRADVC7280ZK.ppd)
+  imageRUNNER ADVANCE C7280 (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C9060/9070 UFR II (CNCUPSIRADVC9070ZK.ppd)
+  imageRUNNER ADVANCE C9060/C9070 PRO (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C9065/9075 UFR II (CNCUPSIRADVC9075ZK.ppd)
+  imageRUNNER ADVANCE C9065/C9075 PRO (BIDI: -, IPv6: A)
+
+  Canon iR-ADV C9270/9280 UFR II (CNCUPSIRADVC9280ZK.ppd)
+  imageRUNNER ADVANCE C9270/C9280 PRO (BIDI: -, IPv6: A)
+
+  Canon iR-ADV 400/500 UFR II (CNCUPSIRADV500ZK.ppd)
+  imageRUNNER ADVANCE 400/500 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 4025/4035 UFR II (CNCUPSIRADV4035ZK.ppd)
+  imageRUNNER ADVANCE 4025i/4035i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 4045/4051 UFR II (CNCUPSIRADV4051ZK.ppd)
+  imageRUNNER ADVANCE 4045i/4051i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 4225/4235 UFR II (CNCUPSIRADV4235ZK.ppd)
+  imageRUNNER ADVANCE 4225/4225i/4235/4235i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 4245/4251 UFR II (CNCUPSIRADV4251ZK.ppd)
+  imageRUNNER ADVANCE 4245/4245i/4251/4251i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 6055/6065 UFR II (CNCUPSIRADV6065ZK.ppd)
+  imageRUNNER ADVANCE 6055/6055i/6065/6065i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 6075 UFR II (CNCUPSIRADV6075ZK.ppd)
+  imageRUNNER ADVANCE 6075/6075i (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 6255/6265 UFR II (CNCUPSIRADV6265ZK.ppd)
+  imageRUNNER ADVANCE 6255/6265 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 6275 UFR II (CNCUPSIRADV6275ZK.ppd)
+  imageRUNNER ADVANCE 6275 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 8085/8095 UFR II (CNCUPSIRADV8095ZK.ppd)
+  imageRUNNER ADVANCE 8085/8095 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 8105 UFR II (CNCUPSIRADV8105ZK.ppd)
+  imageRUNNER ADVANCE 8105 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 8205 UFR II (CNCUPSIRADV8205ZK.ppd)
+  imageRUNNER ADVANCE 8205 (BIDI: A*, IPv6: A)
+
+  Canon iR-ADV 8285/8295 UFR II (CNCUPSIRADV8295ZK.ppd)
+  imageRUNNER ADVANCE 8295 (BIDI: A*, IPv6: A)
+
+  Canon iR1133 UFRII LT (CNCUPSIR1133ZK.ppd)
+  imageRUNNER 1133/1133A/1133iF (BIDI: -, IPv6: A)
+
+  Canon iR1730/1740/1750 UFRII LT (CNCUPSIR1750ZK.ppd)
+  imageRUNNER 1730/1740/1750 (BIDI: -, IPv6: -)
+
+  Canon iR2520 UFRII LT (CNCUPSIR2520ZK.ppd)
+  imageRUNNER2520/2520i (BIDI: -, IPv6: -)
+
+  Canon iR2525/2530 UFRII LT (CNCUPSIR2530ZK.ppd)
+  imageRUNNER2525/2525i/2530/2530i (BIDI: -, IPv6: -)
+
+  Canon iR2535/2545 UFRII LT (CNCUPSIR2545ZK.ppd)
+  imageRUNNER2535/2535i/2545/2545i (BIDI: -, IPv6: -)
+
+  Canon iR105PLUS UFRII LT (CNCUPSIR105PZK.ppd)
+  iR105+ (BIDI: -, IPv6: -)
+
+  Canon iR1018/1022/1023 UFRII LT (CNCUPSIR1023ZK.ppd)
+  iR1018/1022 (BIDI: -, IPv6: -)
+
+  Canon iR1020/1024/1025 UFRII LT (CNCUPSIR1025ZK.ppd)
+  iR1020 (BIDI: -, IPv6: -)
+  iR1024/1024A/1024F/1024i/1024iF (BIDI: -, IPv6: )
+
+  Canon iR2002/2202 UFRII LT (CNCUPSIR2202ZK.ppd)
+  imageRUNNER 2002N/2202N (BIDI: -, IPv6: A)
+
+  Canon iR2016 UFRII LT (CNCUPSIR2016ZK.ppd)
+  iR2016/2016i (BIDI: -, IPv6: -)
+
+  Canon iR2018 UFRII LT (CNCUPSIR2018ZK.ppd)
+  iR2018/2018i (BIDI: -, IPv6: -)
+
+  Canon iR2020 UFRII LT (CNCUPSIR2020ZK.ppd)
+  iR2020/2020i (BIDI: -, IPv6: -)
+
+  Canon iR2022/2025/2030 UFRII LT (CNCUPSIR2030ZK.ppd)
+  iR2022/2025/2030 (BIDI: -, IPv6: -)
+
+  Canon iR2230 UFR II (CNCUPSIR2230ZK.ppd)
+  iR2230 (BIDI: -, IPv6: -)
+
+  Canon iR2270/iR2870 UFR II (CNCUPSIR2870ZK.ppd)
+  iR2270/iR2870 (BIDI: -, IPv6: -)
+
+  Canon iR2318/2320 UFRII LT (CNCUPSIR2320ZK.ppd)
+  iR2318L (BIDI: -, IPv6: -)
+  iR2320L/2320N (BIDI: -, IPv6: )
+
+  Canon iR2420 UFRII LT (CNCUPSIR2420ZK.ppd)
+  iR2420D/2420L (BIDI: -, IPv6: -)
+
+  Canon iR2422 UFRII LT (CNCUPSIR2422ZK.ppd)
+  iR2422D/2422J/2422L/2422N (BIDI: -, IPv6: -)
+
+  Canon iR2830 UFR II (CNCUPSIR2830ZK.ppd)
+  iR2830 (BIDI: -, IPv6: -)
+
+  Canon iR3025 UFR II (CNCUPSIR3025ZK.ppd)
+  iR3025 (BIDI: -, IPv6: -)
+
+  Canon iR3030 UFR II (CNCUPSIR3030ZK.ppd)
+  iR3030 (BIDI: -, IPv6: -)
+
+  Canon iR3035/iR3045 UFR II (CNCUPSIR3045ZK.ppd)
+  iR3035/3045 (BIDI: -, IPv6: -)
+
+  Canon iR3225 UFR II (CNCUPSIR3225ZK.ppd)
+  iR3225/3225N (BIDI: -, IPv6: A)
+
+  Canon iR3230 UFR II (CNCUPSIR3230ZK.ppd)
+  iR3230/3230A/3230N (BIDI: -, IPv6: A)
+
+  Canon iR3235/iR3245 UFR II (CNCUPSIR3245ZK.ppd)
+  iR3235/3235A/3235N/3245/3245A/3245N (BIDI: -, IPv6: A)
+
+  Canon iR3530 UFR II (CNCUPSIR3530ZK.ppd)
+  iR3530 (BIDI: -, IPv6: -)
+
+  Canon iR3570/iR4570 UFR II (CNCUPSIR4570ZK.ppd)
+  iR3570/4570 (BIDI: -, IPv6: -)
+
+  Canon iR4530 UFR II (CNCUPSIR4530ZK.ppd)
+  iR4530 (BIDI: -, IPv6: -)
+
+  Canon iR5055/iR5065 UFR II (CNCUPSIR5065ZK.ppd)
+  iR5055/5065 (BIDI: -, IPv6: -)
+
+  Canon iR5075 UFR II (CNCUPSIR5075ZK.ppd)
+  iR5075 (BIDI: -, IPv6: -)
+
+  Canon iR5570/iR6570 UFR II (CNCUPSIR6570ZK.ppd)
+  iR5570/6570 (BIDI: -, IPv6: -)
+
+  Canon iR7086-7105 UFR II (CNCUPSIR7105ZK.ppd)
+  iR7086/7095/7105 (BIDI: -, IPv6: -)
+
+  Canon iR8070 UFR II (CNCUPSIR8070ZK.ppd)
+  iR8070 (BIDI: -, IPv6: -)
+
+  Canon iR85PLUS UFR II (CNCUPSIR85PZK.ppd)
+  iR85+ (BIDI: -, IPv6: -)
+
+  Canon iR9070 UFR II (CNCUPSIR9070ZK.ppd)
+  iR9070 (BIDI: -, IPv6: -)
+
+  Canon iRC1021/1022 UFRII LT (CNCUPSIRC1022ZK.ppd)
+  iR C1021/C1021i (BIDI: A, IPv6: -)
+
+  Canon iRC1028/1030 UFRII LT (CNCUPSIRC1030ZK.ppd)
+  iR C1028/C1030 (BIDI: A, IPv6: -)
+
+  Canon iR C2380/2550 UFR II (CNCUPSIRC2550ZK.ppd)
+  iR C2380i/C2550/C2550i (BIDI: -, IPv6: -)
+
+  Canon iR C2580 UFR II (CNCUPSIRC2580ZK.ppd)
+  iR C2580i (BIDI: -, IPv6: -)
+
+  Canon iR C2880/C3380 UFR II (CNCUPSIRC3380ZK.ppd)
+  iR C2880/C2880i/C3380/C3380i (BIDI: -, IPv6: -)
+
+  Canon iR C3080/3480/3580 UFR II (CNCUPSIRC3580ZK.ppd)
+  iR C3080/C3080i/C3580/C3580i (BIDI: -, IPv6: -)
+
+  Canon iR C3180 UFR II (CNCUPSIRC3180ZK.ppd)
+  iR C3180/C3180i (BIDI: -, IPv6: -)
+
+  Canon iR 3180C EUR UFR II (CNCUPSIR3180CZK.ppd)
+  iR 3180C/3180Ci (BIDI: -, IPv6: -)
+
+  Canon iR C4080/C4580 UFR II (CNCUPSIRC4580ZK.ppd)
+  iR C4080/C4580 (BIDI: -, IPv6: -)
+
+  Canon iR C5180 UFR II (CNCUPSIRC5180ZK.ppd)
+  iR C5180 (BIDI: -, IPv6: -)
+
+  Canon iR C5185 UFR II (CNCUPSIRC5185ZK.ppd)
+  iR C5185 (BIDI: -, IPv6: -)
+
+  Canon iR C5870 UFR II (CNCUPSIRC5870ZK.ppd)
+  iR C5870 (BIDI: -, IPv6: -)
+
+  Canon iR C6870 UFR II (CNCUPSIRC6870ZK.ppd)
+  iR C6870 (BIDI: -, IPv6: -)
+
+  Canon iR C5880/C6880 UFR II (CNCUPSIRC6880ZK.ppd)
+  iR C5880/C5880i/C6880/C6880i (BIDI: -, IPv6: -)
+
+  Canon iR 5880C/6880C EUR UFR II (CNCUPSIR6880CZK.ppd)
+  iR 5880C/5880Ci/6880C/6880Ci (BIDI: -, IPv6: -)
+
+  Canon iPR C1 UFR II (CNCUPSIPRC1ZK.ppd)
+  imagePRESS C1 (BIDI: -, IPv6: -)
+
+  Canon iPR C1PLUS UFR II (CNCUPSIPRC1PZK.ppd)
+  imagePRESS C1+ (BIDI: -, IPv6: -)
+
+  Canon L90/L160/L230 UFRII LT (CNCUPSL230ZK.ppd)
+  L160 (BIDI: -, IPv6: -)
+
+  Canon L100/L150/L170 UFRII LT (CNCUPSL170ZK.ppd)
+  L150/L170 (BIDI: -, IPv6: -)
+
+  Canon LC800/L3000 UFRII LT (CNCUPSLC3000ZK.ppd)
+  L3000 Series (BIDI: -, IPv6: -)
+
+  Canon L190/L410 Series UFRII LT (CNCUPSL410ZK.ppd)
+  L190/L410 Series (BIDI: -, IPv6: -)
+
+  Canon MF3010 (CNCUPSMF3010ZK.ppd)
+  MF3010 (BIDI: -, IPv6: -)
+
+  Canon MF4010 Series UFRII LT (CNCUPSMF4010ZK.ppd)
+  MF4010 Series (BIDI: -, IPv6: -)
+
+  Canon MF4100 Series UFRII LT (CNCUPSMF4100ZK.ppd)
+  MF4100 Series (BIDI: -, IPv6: -)
+
+  Canon MF4200 Series UFRII LT (CNCUPSMF4200ZK.ppd)
+  MF4200 Series (BIDI: -, IPv6: -)
+
+  Canon MF4320-4350 (CNCUPSMF4350ZK.ppd)
+  MF4320-4350 (BIDI: -, IPv6: -)
+
+  Canon MF4360-4390 (CNCUPSMF4390ZK.ppd)
+  MF4360-4390 (BIDI: -, IPv6: -)
+
+  Canon MF4400 UFRII LT (CNCUPSMF4400ZK.ppd)
+  MF4400 Series (BIDI: -, IPv6: -)
+
+  Canon MF4400w Series (CNCUPSMF4400WZK.ppd)
+  MF4400w (BIDI: -, IPv6: -)
+
+  Canon MF4500 UFRII LT (CNCUPSMF4500ZK.ppd)
+  MF4500 Series (BIDI: -, IPv6: -)
+
+  Canon MF4500w Series (CNCUPSMF4500WZK.ppd)
+  MF4500w (BIDI: -, IPv6: -)
+
+  Canon MF4600 Series UFRII LT (CNCUPSMF4600ZK.ppd)
+  MF4600 Series (BIDI: -, IPv6: -)
+
+  Canon MF4700 Series UFRII LT (CNCUPSMF4700ZK.ppd)
+  MF4700 Series (BIDI: -, IPv6: -)
+
+  Canon MF4800 Series UFRII LT (CNCUPSMF4800ZK.ppd)
+  MF4800 Series (BIDI: -, IPv6: -)
+
+  Canon MF5800 Series UFRII LT (CNCUPSMF5800ZK.ppd)
+  MF5800 Series (BIDI: -, IPv6: -)
+
+  Canon MF5900 Series UFRII LT (CNCUPSMF5900ZK.ppd)
+  MF5900 Series (BIDI: -, IPv6: A)
+
+  Canon MF6100 Series UFRII LT (CNCUPSMF6100ZK.ppd)
+  MF6100 Series (BIDI: -, IPv6: A)
+
+  Canon D400-450 (CNCUPSD450ZK.ppd)
+  D400-450 (BIDI: -, IPv6: -)
+
+  Canon D460-490 (CNCUPSD490ZK.ppd)
+  D460-490 (BIDI: -, IPv6: -)
+
+  Canon D530/D560 (CNCUPSD560ZK.ppd)
+  D530/D560 (BIDI: -, IPv6: -)
+
+  Canon D500 Series UFRII LT (CNCUPSD500ZK.ppd)
+  D500 Series (BIDI: -, IPv6: -)
+
+  Canon D1100/MF6600 UFRII LT (CNCUPSD1100ZK.ppd)
+  D1100 Series (BIDI: -, IPv6: -)
+  MF6600 Series (BIDI: -, IPv6: -)
+
+  Canon D1300/MF6700 UFRII LT (CNCUPSD1300ZK.ppd)
+  D1300/MF6700 (BIDI: -, IPv6: A)
+
+  Canon MF6500 Series UFRII LT (CNCUPSMF6500ZK.ppd)
+  MF6500 Series (BIDI: -, IPv6: -)
+
+  Canon MF7100 Series UFRII LT (CNCUPSMF7100ZK.ppd)
+  MF7100 Series (BIDI: -, IPv6: -)
+
+  Canon MF8000 Series UFRII LT (CNCUPSMF8000ZK.ppd)
+  MF8000 Series (BIDI: A, IPv6: A)
+
+  Canon MF8000C Series UFRII LT (CNCUPSMF8000CZK.ppd)
+  MF8000C (BIDI: A, IPv6: A)
+
+  Canon MF8200C Series UFRII LT (CNCUPSMF8200CZK.ppd)
+  MF8200C (BIDI: A, IPv6: A)
+
+  Canon MF8300 Series UFRII LT (CNCUPSMF8300ZK.ppd)
+  MF8300 Series (BIDI: A, IPv6: A)
+
+  Canon MF8300C Series UFRII LT (CNCUPSMF8300CZK.ppd)
+  MF8300C (BIDI: A, IPv6: A)
+
+  Canon MF8400 UFRII LT (CNCUPSMF8400ZK.ppd)
+  MF8400 Series (BIDI: A, IPv6: -)
+
+  Canon MF8500C Series UFRII LT (CNCUPSMF8500CZK.ppd)
+  MF8500C (BIDI: A, IPv6: A)
+
+  Canon MF9100/9300 UFRII LT (CNCUPSMF9300ZK.ppd)
+  MF9100 Series (BIDI: A, IPv6: -)
+  MF9300 Series (BIDI: A, IPv6: -)
+
+  Canon MF9200 UFRII LT (CNCUPSMF9200ZK.ppd)
+  MF9200 Series (BIDI: A, IPv6: -)
+
+Per informazioni sulla modalità di installazione e l'utilizzo corretto, 
+consultare il manuale in linea.
+
+
+4. Precauzioni, limitazioni e restrizioni---------------------------------------
+
+- Se si installa il pacchetto "cndrvcups-common" versione 2.90, accertarsi di 
+  installare la stessa versione del pacchetto "cndrvcups-ufr2", ovvero la 2.90.
+
+- Non è possibile installare aggiornamenti quando si esegue l'aggiornamento alla
+  versione 1.40 o successiva, poiché i nomi dei file sono diversi da quelli 
+  delle versioni precedenti. Se si dispone di una versione precedente del 
+  driver, è necessario disinstallarla prima di installare la nuova.
+
+- Se vengono installati più di due driver mediante i pacchetti di installazione 
+  LIPSLX, UFR II(US) e UFR II(IT) e viene aggiornato soltanto un driver, si 
+  verificherà un errore.
+  Tale problema può essere risolto aggiornando contemporaneamente tutti i driver
+  installati.
+
+- Se vengono specificate più pagine o copie per [Layout di pagina] nella scheda 
+  [Generale] per stampare un documento creato con StarSuite7/OpenOffice, il 
+  modulo CUPS impedisce l'assegnazione corretta delle impostazioni a più 
+  pagine e al risultato finale.
+
+- I file PostScript creati con il numero di copie specificato in OpenOffice.org 
+  o StarSuite non sono influenzati dal valore specificato da [Copie] nella 
+  finestra di dialogo [cngplp] (interfaccia utente driver), ma dal numero di 
+  copie impostate durante la creazione del file PostScript.
+
+- Se le impostazioni vengono modificate dall'interfaccia utente del driver, 
+  durante l'elaborazione della stampa il risultato rifletterà le modifiche alle 
+  impostazioni.
+
+- Se l'opzione [Luminosità e gamma] viene specificata nella scheda [Generale] da
+  un'applicazione come OpenOffice.org, GIMP o Acrobat Reader v.5.0, le 
+  impostazioni non risulteranno valide.
+
+- Non è possibile stampare un documento PDF selezionandolo direttamente dal 
+  desktop o dalla riga di comando. Per stampare un documento PDF, è 
+  consigliabile eseguire l'operazione da Acrobat Reader o Adobe Reader.
+
+- In base alle specifiche CUPS, durante la stampa è possibile mantenere in coda 
+  fino a 500 file. I file successivi verranno ignorati.
+
+- Se si utilizza SUSE LINUX Professional 9.3, l'interfaccia utente del driver 
+  potrebbe visualizzare caratteri non intellegibili. Questo problema può essere 
+  risolto con la seguente procedura.
+  1) Effettuare l'accesso come 'root'.
+  2) Eseguire il comando seguente per modificare le impostazioni dell'ambiente 
+     GTK+.
+     # cd /etc/
+     # ln -s opt/gnome/gtk ./
+
+- Se si utilizza SUSE LINUX Professional 9.3, potrebbe essere visualizzato un 
+  messaggio di avviso durante l'attivazione dell'interfaccia utente del driver.
+  Questo problema può essere risolto con la seguente procedura.
+  1) Aprire [K Menu] -> [Control Center].
+  2) Selezionare [Appearance & Themes].
+  3) Selezionare [Colors].
+  4) Deselezionare [Apply colors to non-KDE applications].
+  5) Chiudere [Control Center].
+
+- Se si esegue una stampa da OpenOffice.org, alcune operazioni di finitura, ad 
+  esempio [Ruota], potrebbero non funzionare correttamente se vengono 
+  specificate più copie nell'opzione [Copie] dell'interfaccia utente del driver.
+
+- Se si utilizza SUSE Linux 9.3 o SUSE Linux 10.0 e si esegue la stampa dalla 
+  finestra di dialogo [Print] di Mozilla o FireFox, è possibile stampare una 
+  sola copia, poiché l'impostazione per più copie non è attivata. È possibile 
+  risolvere questo problema modificando la riga seguente del file "/etc/cups/
+  mime.convs".
+  [Prima della modifica]
+   application/mozilla-ps application/postscript 33 pswrite
+  [Dopo la modifica]
+   application/mozilla-ps application/postscript 33 pstops
+
+- Quando si esegue la stampa delle intestazioni in Fedora 8/9, se è stata 
+  specificata un'impostazione diversa da [Nessuno] per [Fine] in [Intestazione] 
+  all'interno della scheda [Generale], la coda di stampa verrà interrotta.
+
+- Se si cerca di eseguire la stampa da una stampante Color iR/LBP utilizzando 
+  questo driver in un ambiente Fedora 9/10/11/12/13/14/15/16/17/18/19/20 a 64 bit, 
+  i risultati di stampa potrebbero non essere quelli desiderati.
+  Ciò si verifica poiché quando i pacchetti a 64 bit vengono installati con il 
+  metodo di installazione standard, la libreria JPEG a 32 bit non viene 
+  installata.
+  Tale problema può essere risolto installando i pacchetti con un'installazione 
+  successiva.
+  Eseguire il seguente comando.
+    <Fedora 9/10> # yum install libjpeg.i386
+    <Fedora 11> # yum install libjpeg.i586
+    <Fedora 12/13> # yum install libjpeg.i686
+    <Fedora 14/15/16/17/18> # yum install libjpeg-turbo.i686
+    <Fedora 19/20> # yum install libstdc++.i686
+                   # yum install libjpeg-turbo.i686
+
+- Per installare il modulo comune nella versione a 64 bit di Fedora 10/11/12/13/
+  14/15/16/17/18/19/20, è necessaria la libreria glibc a 32 bit.
+  È possibile installare la libreria glibc mediante il seguente comando:
+    <Fedora 10> # yum install glibc.i386
+    <Fedora 11> # yum install glibc.i586
+    <Fedora 12/13/14/15/16/17/18/19/20> # yum install glibc.i686
+  Inoltre, per i driver di stampante dalla versione 1.90 in avanti è necessaria 
+  la versione a 32 bit della libreria xml2.
+  È possibile attivare la stampa mediante il seguente comando:
+    <Fedora 10> # yum install libxml2.i386
+    <Fedora 11> # yum install libxml2.i586
+    <Fedora 12/13/14/15/16/17/18/19/20> # yum install libxml2.i686
+
+- Se si utilizza Fedora 11 e si stampa con la coda di stampa interrotta dopo 
+  aver annullato un processo, questo viene sospeso. In questo caso, fare clic 
+  sul pulsante [Maintenance] nell'area delle stampanti dell'interfaccia CUPSWeb 
+  e selezionare [Resume Printer] per effettuare nuovamente il processo 
+  [pending since].
+  Se il pulsante [Maintenance] non si trova, è possibile selezionare [Resume 
+  Printer] selezionando [Pause Printer].
+
+- Se si utilizza OpenSUSE 10.2 o SLED10SP1, che include Ghostscript versione 
+  8.15.3, potrebbe non essere possibile stampare alcuni documenti. Per risolvere
+  questo problema, installare un'altra versione di Ghostscript.
+
+- Se si utilizza OpenSUSE 11.0 con Ghostscript versione 8.6.x, la stampa da 
+  Evince, GIMP o altre applicazioni potrebbe richiedere tempo.
+
+- Sebbene Okular sia il visualizzatore di documenti standard nell'ambiente 
+  OpenSUSE 11.1 KDE, il driver di stampante non funziona correttamente con esso.
+  È possibile risolvere il problema utilizzando un'altra applicazione, ad 
+  esempio Acrobat Reader.
+
+- Se si utilizza Ubuntu 7.04/7.10/8.04/8.10/9.04 o Debian 3.1/4.0/5.0, per 
+  installare il modulo comune è necessaria la libreria libcupsys2.
+  È possibile installare la libreria libcupsys2 mediante il seguente comando:
+    # apt-get install libcupsys2
+
+- Se si utilizza Ubuntu 8.10/9.04/9.10/10.04/10.10/11.04/11.10/12.04/12.10/13.04
+  /13.10, Fedora 19/20 la stampante stamperà con il metodo di uscita della carta 
+  predefinito, anche se è stato specificato un altro metodo.
+  È possibile risolvere il problema modificando l'impostazione relativa al 
+  metodo di uscita della carta nelle impostazioni della stampante CUPS (Web).
+
+- Se si utilizza Ubuntu 8.10, l'impostazione della stampa in ordine inverso non 
+  influisce sul risultato della stampa.
+  Per risolvere questo problema, aggiornare CUPS.
+
+- Se si utilizza Ubuntu 8.10/9.04/9.10/10.04/10.10/11.04/11.10/12.04/12.10/13.04
+  /13.10 e si stampano dati PDF o PS, le impostazioni relative alla correzione 
+  di luminosità e gamma potrebbero non essere applicate ai risultati di stampa.
+
+- Se si utilizza Adobe Reader 7.0.x e vengono modificate impostazioni quali 
+  Paper Size, Paper Source, Duplex Printing e così via nella finestra di dialogo
+  di stampa, queste opzioni verranno automaticamente aggiunte al comando della 
+  stampante. Queste impostazioni tuttavia non risulteranno valide, in quanto non
+  vengono riconosciute come opzioni di comando. Per risolvere questo problema, 
+  utilizzare "-o" per separare le opzioni di comando.
+    [prima] -o InputSlot=Manual,Duplex=DuplexNotumble
+    [dopo] -o InputSlot=Manual -o Duplex=DuplexNoTumble
+
+- Se si esegue la stampa di file PDF utilizzando Adobe Reader 8, è possibile che
+  alcuni dati relativi alle immagini non vengano stampati.
+  È possibile risolvere il problema eseguendo la stampa mediante Adobe Reader 7 
+  o 9 o impostando il livello 3 nelle opzioni PostScript.
+
+- Se si esegue la stampa fronte/retro con Adobe Reader 8.1.2 e si specifica [ON 
+  (Short-edged Binding)] per [Duplex Printing] nelle proprietà di stampa di 
+  Adobe Reader 8.1.2, il documento verrà stampato su entrambi i lati con 
+  rilegatura sul lato lungo.
+  Per evitare questo problema, stampare il documento mediante l'interfaccia 
+  utente del driver della stampante.
+
+- Se si utilizza Vine Linux 3.1, la stampa da Adobe Reader 7.0.9 potrebbe 
+  richiedere alcuni minuti, oppure potrebbe non essere possibile stampare alcuni
+  documenti.
+
+- Quando si esegue la stampa di file PDF contenenti caratteri giapponesi dalla 
+  riga di comando in Vine Linux 4.1, Ghostscript potrebbe subire un arresto 
+  imprevisto e causare di conseguenza l'interruzione della stampa.
+  Per evitare questo problema, stampare il file PDF mediante Adobe Reader.
+
+- Quando si esegue la stampa di file PDF da Adobe Reader 8 in Vine Linux 4.1, 
+  Ghostscript potrebbe subire un arresto imprevisto e causare di conseguenza 
+  l'interruzione della coda di stampa.
+  Questo problema è causato dal fatto che Ghostscript (7.07) non è in grado di 
+  analizzare i file PS creati da Adobe Reader 8 e di conseguenza subisce un 
+  arresto imprevisto e causa l'interruzione del processo di filtraggio.
+  Per evitare questo problema, utilizzare Adobe Reader 7.
+
+- Se si esegue la stampa di file di testo con orientamento orizzontale in Vine 
+  Linux 4.1/4.2, Fedora 8/9 o Red Hat Enterprise Linux v.5, in alcuni casi i 
+  file di testo potrebbero essere stampati con orientamento verticale e alcuni 
+  dati potrebbero risultare mancanti.
+  Ciò è dovuto al filtro CUPS impiegato dalla distribuzione utilizzata per la 
+  creazione di un comando PS già impostato sull'orientamento verticale.
+  Inoltre, alcune funzioni disponibili nel filtro standard CUPS "texttops" 
+  potrebbero non funzionare correttamente.
+  È possibile evitare questo problema modificando il nome del filtro CUPS 
+  specificato nella riga della voce "text/plain" del file di impostazione CUPS 
+  "mime.convs", utilizzando il nome del filtro standard CUPS "texttops". Come 
+  conseguenza di questa operazione, i caratteri giapponesi non verranno 
+  stampati correttamente. Pertanto, per stampare caratteri giapponesi, sarà 
+  necessario stampare un comando PS creato con un editor di testo o un programma
+  di conversione testo/PostScript, ad esempio paps.
+
+- Se si specificano le impostazioni relative all'alimentazione carta nella 
+  finestra di dialogo di stampa di un'applicazione come Writer di 
+  OpenOffice.org, le impostazioni configurate dall'applicazione verranno 
+  sostituite dalle impostazioni dell'interfaccia utente del driver della 
+  stampante. Per eseguire la stampa con l'alimentazione carta desiderata, 
+  specificare quest'ultima in anticipo nell'interfaccia utente del driver della 
+  stampante oppure eseguire la stampa mediante la riga di comando.
+
+- Se si utilizza Debian GNU/Linux 4.0, potrebbe verificarsi un errore con i file
+  PPD quando si registra la stampante (PPD) con lo spooler di stampa. Per 
+  risolvere il problema, utilizzare "-P (percorso completo del ppd)" invece di 
+  "-m" quando si specifica il ppd che utilizza la riga di comando.
+    Esempio: /usr/sbin/lpadmin -p iRC5180
+             -P /usr/share/cups/model/CNCUPSIRC5180ZK.ppd
+             -v lpd://192.168.1.10/iRC5180 -E
+
+- In Ubuntu 10.10/11.04/11.10/12.04/12.10/13.04, Fedora 14/15/16/17/18/19/20, 
+  durante la registrazione di una stampante, il formato documento predefinito 
+  potrebbe non essere il formato documento corrispondente alla lingua/area 
+  geografica del sistema operativo. È possibile risolvere il problema 
+  registrando la stampante con il seguente metodo.
+  [Metodo 1]
+    Specificare "-P" anziché "-m" per l'opzione del nome del file PPD nel 
+    comando "lpadmin".
+    Se si specifica "-P" per il file PPD, specificare un nome di percorso 
+    completo o un nome di percorso relativo per il file PPD specificato.
+    Esempio:
+    # /usr/sbin/lpadmin -p [nome della stampante per la registrazione] -P 
+      [percorso file PPD] -v lpd:[URI dispositivo] -E
+  [Metodo 2]
+  1) Aggiungere "DefaultPaperSize Auto" a "/etc/cups/cupsd.conf", quindi 
+     riavviare CUPS.
+  2) Registrare la stampante.
+
+- Se si utilizza Debian GNU/Linux 4.0, la stampa da Evince potrebbe richiedere 
+  tempo o potrebbe non essere possibile stampare alcuni documenti. Per risolvere
+  il problema, stampare i documenti da un'altra applicazione.
+
+- Se si utilizza Debian GNU/Linux 4.0 r6 e si tenta di stampare un file di testo
+  mediante l'interfaccia utente del driver della stampante con le impostazioni 
+  internazionali EUC-JP, la stampa non funziona.
+  È possibile risolvere il problema stampando un comando PS creato con un editor
+  di testo o un programma di conversione testo/PostScript, ad esempio paps.
+
+- Se si utilizza Debian GNU/Linux 5.0.2, per installare il modulo comune è 
+  necessario il modulo gs-esp.
+  È possibile installare il modulo gs-esp mediante il seguente comando.
+    # apt-get install gs-esp
+
+- A seconda della distribuzione utilizzata, quando si esegue la registrazione 
+  della stampante USB allo spooler di stampa specificando /dev/usb/lp* come 
+  [Device URI], la stampa potrebbe visualizzare l'errore "Printer not 
+  Connected". Per risolvere questo problema, specificare il nome specifico della
+  stampante come [Device URI] visualizzato mediante il comando seguente.
+  Esempio: Se si utilizza la MF4600 Series
+  1) Visualizzare [Device URI]
+    # /usr/sbin/lpinfo -v
+    direct usb://Canon/MF4600%20Series%20(FAX)
+    direct usb://Canon/MF4600%20Series%20(PCL5e)
+    direct usb://Canon/MF4600%20Series%20(PCL6)
+    direct usb://Canon/MF4600%20Series%20(UFRII%20LT)
+  2) Registrare la stampante
+    #lpadmin -p MF4600_USB -m CNCUPSMF4600ZK.ppd
+     -v usb://Canon/MF4600%20Series%20(UFRII%20LT) -E
+
+- Quando si esegue la stampa di file PDF da Adobe Reader in Mandriva, 
+  indipendentemente dalla versione utilizzata, Ghostscript potrebbe subire un 
+  arresto imprevisto e causare di conseguenza l'interruzione della coda di 
+  stampa.
+  Questo problema è causato dal fatto che Ghostscript (8.60) non è in grado di 
+  analizzare i comandi creati utilizzando i file PS per cui sono state 
+  specificate impostazioni di protezione e di conseguenza subisce un arresto 
+  imprevisto e causa l'interruzione del processo di filtraggio.
+  Per evitare questo problema, non eseguire la stampa dei file PDF con 
+  impostazioni di protezione mediante Adobe Reader.
+
+- Se si utilizza Mandriva One 2008 Spring o Mandriva 2008 PowerPack con CUPS 
+  1.3.6, si potrebbero ottenere risultati non desiderati anche se si utilizzano 
+  le funzionalità di stampa CUPS standard.
+  Per risolvere questo problema, aggiornare CUPS.
+
+- Se si dispone di Ghostscript versione 8,6.x, potrebbe non essere possibile 
+  stampare alcuni documenti.
+
+- In alcuni casi, le stampanti MF4270 o L90/L160/L230 non funzionano a causa di 
+  un errore dei dati nel dispositivo, a seconda dall'ambiente e dal tipo di dati
+  di stampa.
+  Questo problema è causato da un errore di timeout verificatosi nel 
+  dispositivo.
+  Per evitare questo problema, disattivare l'impostazione di timeout nel 
+  dispositivo.
+
+- Se il Finisher Q3 o il Finisher con pinz. a sella-Q4 è collegato ed è 
+  specificato il formato pagina A4, Letter o Legal, il documento non viene 
+  stampato correttamente con [Posizione di rilegatura] impostata su [Lato corto 
+  (Superiore)] e [Posizione di pinzatura] impostata su [Superiore (Doppia)], o 
+  con [Posizione di rilegatura] impostata su [Lato corto (Inferiore)] e 
+  [Posizione di pinzatura] impostata su [In basso (Doppia)], nella scheda 
+  [Finitura].
+
+- Se si utilizza una stampante iR C1021/C1021i, MF8400 Series, MF9100 Series o 
+  MF9300 Series, anche se dal pannello di controllo della stampante è possibile 
+  impostare il protocollo IPv6, la connessione di rete è supportata solo tramite
+  il protocollo IPv4.
+
+- Se si utilizza CentOS 5.3, non è possibile stampare il numero di copie 
+  specificato in Evince.
+  È possibile risolvere il problema stampando da altri visualizzatori di PDF, ad
+  esempio Adobe Reader, oppure utilizzando i seguenti metodi:
+  1) Impostare il numero di copie su 1 e selezionare un comando PS per definire 
+     la destinazione di stampa in Evince.
+  2) Stampare l'output di comando PS come file dopo avere specificato il numero 
+     di copie in cngplp.
+
+- Se si utilizza Ubuntu 9.04 e si aggiorna la versione CUPS a 
+  "1.3.9-17ubuntu3.2", la stampa non riesce a causa di dati PS errati.
+  È possibile evitare questo problema effettuando il downgrade della versione 
+  CUPS a "1.3.9-17ubuntu3.1".
+  - Eseguire il seguente comando.
+    # apt-get install cups=1.3.9-17ubuntu3.1
+
+- Se si utilizza Ubuntu 9.04/9.10/10.04/10.10/11.04/11.10/12.04/12.10/13.04/
+  13.10, Fedora 11/12/13/14/15/16/17/18/19/20 e si stampano pagine di 
+  intestazione, viene stampato il numero specificato di pagine di intestazione.
+
+- In Fedora 15/16/17/18/19/20 e Ubuntu 11.04/11.10/12.04/12.10/13.04/13.10, se 
+  si stampa con la luminosità specificata tra 0% e 9%, l'impostazione della 
+  luminosità non viene applicata e il documento viene stampato come se la 
+  luminosità fosse impostata al 100%.
+
+- Se si utilizza la versione a 32 bit o 64 bit di Fedora 13/14/15/16/17/18/19 e 
+  si stampa un file TIFF o JPEG dall'interfaccia utente del driver o dalla riga 
+  di comando, l'immagine stampata potrebbe risultare frammentata. Tale problema 
+  può essere risolto stampando il file come un file PostScript da 
+  un'applicazione quale GIMP, e quindi eseguendo la stampa dalla riga di comando
+  digitando il comando PostScript utilizzato per stampare il file dopo [cngplp].
+
+- Se si stampa un'immagine TIFF o JPEG dall'interfaccia utente del driver o 
+  dalla riga di comando, l'immagine potrebbe essere divisa e stampata su più 
+  pagine.
+  Tale problema può essere risolto stampando l'immagine come un file PostScript 
+  da un'applicazione quale GIMP, e quindi eseguendo la stampa del file 
+  PostScript dall'interfaccia utente del driver o dalla riga di comando.
+
+- Se si stampa un file immagine TIFF dalla finestra di dialogo [cngplp] o dalla 
+  riga di comando, la stampa potrebbe risultare non visibile, a seconda 
+  dell'immagine. 
+  [Metodo 1]
+   È possibile risolvere il problema eseguendo la stampa da un'applicazione come
+   GIMP etc. 
+  [Metodo 2]
+   È possibile risolvere il problema stampando il file come un file PostScript, 
+   quindi eseguendo la stampa del file PostScript dalla finestra di dialogo 
+   [cngplp].
+
+- Se si utilizza Fedora 13/14/15/16/17/18/19/20, anche se si specificano le 
+  impostazioni di luminosità e gamma dall'interfaccia utente del driver o dalla 
+  riga di comando, le impostazioni non vengono applicate al risultato della 
+  stampa dalla seconda pagina in avanti.
+  Ciò accade perché queste funzioni non vengono attivate in quanto Ghostscript 
+  non riconosce correttamente i dati PostScript creati dall'applicazione.
+
+- Se si cambia il metodo di uscita in [Stampa] dopo aver specificato [Stampa 
+  protetta] come metodo di uscita e si fa clic su [Impostazioni di stampa e 
+  salvataggio] nel driver UI (comando [cngplp]), il nome del documento che si 
+  sta generando usando [Stampa protetta] viene visualizzato nel registro lavori 
+  della stampante. Questo problema può essere risolto utilizzando il pulsante 
+  [Impostazioni di stampa e salvataggio] invece del pulsante [Stampa] per 
+  stampare quando si cambia il metodo di uscita da [Stampa protetta] a [Stampa].
+
+- Dopo aver impostato una voce o un valore di visualizzazione testuale, se si 
+  termina l'operazione facendo clic sul pulsante [X] in alto a destra nella 
+  finestra di dialogo, il valore viene trattato come un valore valido, come se 
+  si utilizzasse il pulsante [OK]. Per disattivare il valore impostato, fare 
+  clic sul pulsante [Annulla].
+
+- I seguenti caratteri vengono trattati in modo diverso nelle varie versioni di 
+  CUPS. Pertanto, si consiglia di non utilizzarli.
+  "#"
+  Dalla versione 1.4 di CUPS in avanti, "#" viene trattato come un commento. 
+  Pertanto, se viene utilizzato in una riga di comando, i caratteri successivi a
+  "#" non vengono riconosciuti come comandi.
+  "\"
+  Se si digita "\\\123", il comando viene riconosciuto nei modi seguenti a 
+  seconda della versione di CUPS:
+  CUPS V1.1.22: \123
+  CUPS V1.4.3: \\123
+
+- In base alla versione di GTK (GIMP Toolkit), alcuni caratteri possono essere 
+  visualizzati sullo schermo in maniera non intelligibile, ma ciò non indica un 
+  problema con le funzioni e i valori impostati. Ridisegnare la corrispondente 
+  area di testo per risolvere il problema.
+
+- Se si utilizza Fedora 12 o Ubuntu 9.10 e si modificano le opzioni predefinite 
+  dall'interfaccia Web CUPS, i valori predefiniti verranno salvati anche in 
+  presenza di conflitto tra le impostazioni di ogni funzione. Inoltre, una volta
+  che le impostazioni vengono salvate in presenza di conflitto, non è possibile 
+  salvarle di nuovo anche se si utilizza l'interfaccia Web per modificarle con i
+  valori corretti senza conflitto.
+  Se in questa situazione viene visualizzata la finestra di dialogo [cngplp], 
+  l'operazione potrebbe non essere valida.
+  Per risolvere questo problema, è possibile utilizzare i seguenti metodi:
+  [Metodo 1] Fedora 12 (a 32 bit/64 bit) e Ubuntu 9.10
+    Registrare nuovamente la stampante che ha eseguito l'operazione non valida.
+  [Metodo 2] Fedora 12 (a 32 bit/64 bit)
+    Specificare il comando seguente per aggiornare CUPS:
+      <Per Fedora 12 (a 32 bit)> # yum update cups.i686
+      <Per Fedora 12 (a 64 bit)> # yum update cups.x86_64
+
+- Se si utilizza questo driver in un ambiente a 64 bit e si aggiorna un driver 
+  di versione 2.00, 2.10 o 2.20 alla versione 2.30 o successiva, possono 
+  verificarsi errori durante la stampa.
+  Tale problema può essere risolto disinstallando (rpm -e [driver]) e quindi 
+  reinstallando (rpm -i [driver]) il nuovo driver.
+  In alternativa, è possibile disinstallare il vecchio driver (rpm -e [driver]) 
+  anziché aggiornarlo e quindi installare il nuovo driver (rpm -i [driver]).
+
+- Se si specifica un nome di documento che supera i 32 caratteri durante la 
+  stampa, la stringa di caratteri del nome del documento viene cancellata dal 
+  33esimo carattere in avanti dal driver e il nome del documento visualizzato 
+  sul dispositivo avrà una lunghezza massima di 32 caratteri.
+
+- Per utilizzare questo driver per stampante è necessario disporre di 
+  Ghostscript comprensivo di interfacce API comuni.
+  Prima di installare il driver, verificare che Ghostscript sia installato. È 
+  possibile eseguire questa operazione utilizzando il seguente comando in un 
+  emulatore di terminale come GNOME Terminal.
+    % gs -h | grep opvp
+  Se nel risultato vengono visualizzati "opvp" e "oprp", Ghostscript comprensivo
+  di interfacce API comuni è installato. Se non vengono visualizzati risultati, 
+  è possibile scaricare Ghostscript dal seguente URL:
+    http://opfc.sourceforge.jp/index.html.en (Pagina in inglese)
+
+- Se si utilizza Ubuntu 12.04/12.10/13.04/13.10 a 32 bit e si tenta di stampare 
+  con una stampante serie Color iR o Color LBP utilizzando questo driver, la 
+  stampa potrebbe risultare impossibile. Ciò è dovuto al fatto che la libreria 
+  JPEG utilizzata da questo driver non è installata quando si effettua 
+  un'installazione standard in Ubuntu 12.04/12.10/13.04/13.10.
+  È possibile risolvere il problema eseguendo un'altra installazione del 
+  pacchetto.
+  Eseguire il seguente comando:
+    # apt-get install libjpeg62
+
+- Se si utilizza Ubuntu 11.10/12.04/12.10/13.04 e si tenta di stampare 
+  continuamente gli stessi dati, dopo la seconda volta i dati potrebbero non 
+  venire stampati correttamente. È possibile risolvere il problema aggiornando 
+  CUPS con i seguenti comandi.
+    # apt-get install cups
+    # apt-get install libcups2
+
+- Non tutte le librerie a 32 bit richieste per la stampa sono incluse nella 
+  versione a 64 bit di Ubuntu.
+  Prima della stampa, eseguire i seguenti comandi per installare il pacchetto 
+  della libreria a 32 bit.
+    # apt-get install ia32-libs
+    # apt-get install libjpeg62:i386
+   <Per Ubuntu 13.10 o versioni successive>
+    # apt-get install libxml2:i386
+    # apt-get install libjpeg62:i386
+    # apt-get install libstdc++6:i386
+
+- Se si utilizza Ubuntu 12.04/12.10/13.04/13.10, Fedora 18/19/20 con una 
+  connessione USB e si tenta di stampare continuamente gli stessi dati, dopo la 
+  seconda volta i dati potrebbero non venire stampati correttamente.
+  È possibile stampare con le opzioni aggiunte utilizzando il seguente comando:
+    # lpadmin -p NOME_STAMPANTE -o usb-no-reattach-default=true
+
+- Se si installa Fedora 18/19/20 con le impostazioni predefinite, potrebbe 
+  essere impossibile installare il driver perché la libreria pangox-compat 
+  risulta mancante.
+  Questo inconveniente può essere risolto installando la libreria con il 
+  seguente comando:
+    # yum install pangox-compat
+
+- Se si installa Ubuntu 12.10/13.04/13.10 con le impostazioni predefinite, 
+  potrebbe essere impossibile installare il driver perché la libreria glade2 
+  risulta mancante.
+  Questo inconveniente può essere risolto installando la libreria con il 
+  seguente comando:
+    # apt-get install libglade2-0
+
+- Se si utilizza Ubuntu 12.10 e si tenta di stampare un'immagine PDF dalla 
+  finestra di dialogo [cngplp] o dalla riga di comando, l'immagine PDF potrebbe 
+  non essere stampata correttamente.
+  [Metodo 1]
+    È possibile risolvere il problema stampando da un'altra applicazione per la 
+    visualizzazione di PDF, per esempio Adobe Reader.
+  [Metodo 2]
+    È possibile risolvere il problema modificando "/usr/share/cups/mime/
+    cupsfilters.convs" come segue e riavviando CUPS.
+
+    Prima della modifica:
+      # application/pdf application/vnd.cups-postscript 66 pdftops
+      # application/postscript application/vnd.cups-postscript 66 pstops
+
+    Dopo la modifica:
+      application/pdf application/vnd.cups-postscript 33 pdftops
+      application/postscript application/vnd.cups-postscript 33 pstops
+
+- Se si stampa verso una periferica che supporta la funzione di autentificazione
+  per la crittografia dati, sarà necessario utilizzare la libreria beecrypt per 
+  ognuna delle distribuzioni.
+  Eseguire l'installazione facendo riferimento ai seguenti esempi.
+    <Per Fedora 19/20 (32 bit)> # yum install beecrypt beecrypt-devel
+    <Per Fedora 19/20 (64 bit)> # yum install beecrypt.i686 beecrypt-devel.i686
+    <Per Ubuntu 13.04/13.10 (32 bit)> # apt-get install libbeecrypt7 
+                                        beecrypt-dev
+    <Per Ubuntu 13.04/13.10 (64 bit)> # apt-get install libbeecrypt7:i386 
+                                        beecrypt-dev:i386
+
+- Se si utilizza Ubuntu 13.10, quando si crea una coda di stampa con il comando 
+  "lpadmin", se si usa l'opzione -m la stampante viene registrata come stampante
+  locale Raw e la registrazione non avviene correttamente.
+  [Metodo 1]
+    La stampante può essere registrata correttamente immettendo -P invece di -m 
+    come opzione per specificare il file PPD al momento della registrazione, 
+    secondo quanto riportato di seguito.
+      # /usr/sbin/lpadmin -P [nome della stampante per la registrazione] 
+        -P [percorso file PPD] -v lpd:[periferica URI] -E
+    * Se si specifica un file PPD con -P, immettere un percorso assoluto o 
+      relativo in [percorso file PPD].
+  [Metodo 2]
+    Eseguire il seguente comando per aggiornare CUPS:
+      # apt-get install cups
+
+- Se si utilizza Ubuntu 13.04/13.10 o Fedora 19/20 e si seleziona "classified", 
+  "secret", "confidential", "topsecret" o "unclassified" nelle impostazioni di 
+  stampa della pagina del banner nella finestra di dialogo [cngplp] o nella riga
+  di comando, la selezione non viene riflessa nei risultati di stampa. Il 
+  risultato è identico a quando si seleziona "standard".
+
+- Se si utilizza una periferica che supporta una funzione di crittografia dei 
+  dati di autenticazione, impostare [Modalità 2] per [Autenticazione gestione ID 
+  reparto]/[Autenticazione Stampa protetta]. Se si utilizza una periferica che 
+  non supporta la funzione, impostare [Modalità 1] per [Autenticazione gestione 
+  ID reparto]/[Autenticazione Stampa protetta]. Se [Autenticazione gestione ID 
+  reparto]/[Autenticazione Stampa protetta] non viene impostato correttamente, 
+  la funzione di autenticazione potrebbe non operare, oppure la stampa potrebbe 
+  risultare impossibile.
+
+- Se si stampa un'immagine inclusa in un file PDF, potrebbe essere impossibile 
+  stamparla correttamente a seconda del programma utilizzato da pdftops.
+  È possibile risolvere questo problema cambiando il programma utilizzato da 
+  pdftops con il seguente comando.
+  <Se si utilizza pdftops Ghostscript>
+    # lpadmin -p [nome della stampante registrato] -o 
+      pdftops-renderer-default=pdftops
+  <Se si utilizza pdftops Poppler>
+    # lpadmin -p [nome della stampante registrato] -o 
+      pdftops-renderer-default=gs
+
+- Se si utilizza Fedora 20, la funzione di gestione ID reparto potrebbe non 
+  operare, anche se è stata impostata dalla finestra di dialogo [cngplp] o dalla
+  riga di comando (cnjatool).
+  Questo inconveniente può essere risolto aggiornando CUPS con il seguente 
+  comando:
+    # yum install cups
+
+================================================================================
+Supporto
+================================================================================
+Il presente software e le relative informazioni sono sviluppati da Canon in modo
+indipendente e distribuiti dalla sede locale di Canon. Canon (in qualità di 
+produttore di stampanti che supportano il presente software e le relative 
+informazioni) e la sede locale di Canon (in qualità di distributore) non 
+rispondono a eventuali richieste inerenti il software o le relative 
+informazioni. Tuttavia, le richieste inerenti la riparazione della stampante, i 
+materiali di consumo e i dispositivi devono essere indirizzate alla sede Canon 
+locale.
+================================================================================
+Copyright CANON INC. 2004
