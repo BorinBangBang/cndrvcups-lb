@@ -81,3 +81,13 @@ libs/cnpkbidi
 libs/cnpkmoduleufr2
 libtool
 pstoufr2cpca/filter/.deps/
+ppd/m4/libtool.m4
+ppd/m4/lt~obsolete.m4
+ppd/m4/ltoptions.m4
+ppd/m4/ltsugar.m4
+ppd/m4/ltversion.m4
+pstoufr2cpca/m4/libtool.m4
+pstoufr2cpca/m4/lt~obsolete.m4
+pstoufr2cpca/m4/ltoptions.m4
+pstoufr2cpca/m4/ltsugar.m4
+pstoufr2cpca/m4/ltversion.m4

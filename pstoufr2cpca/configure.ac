@@ -34,8 +34,9 @@ AC_FUNC_FORK
 AC_FUNC_MALLOC
 AC_CHECK_FUNCS([dup2 memset])
 
+LT_INIT
+
 AH_VERBATIM([_GNU_SOURCE],[#undef PROG_PATH])
 
-AC_CONFIG_SUBDIRS([filter])
 AC_CONFIG_FILES([Makefile filter/Makefile])
 AC_OUTPUT

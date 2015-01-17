@@ -34,7 +34,6 @@ gettextsrcdir = $(datadir)/glib-2.0/gettext/po
 subdir = po
 
 INSTALL = @INSTALL@
-INSTALL_DATA = @INSTALL_DATA@
 MKINSTALLDIRS = mkdir -p
 
 CC = @CC@
@@ -49,7 +48,7 @@ DEFS = @DEFS@
 CFLAGS = @CFLAGS@
 CPPFLAGS = @CPPFLAGS@
 
-INCLUDES = -I.. -I$(top_srcdir)/intl
+AM_CPPFLAGS = -I.. -I$(top_srcdir)/intl
 
 COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS)
 
@@ -59,14 +58,13 @@ GMOFILES = @GMOFILES@
 DISTFILES = LINGUAS ChangeLog Makefile.in.in POTFILES.in $(GETTEXT_PACKAGE).pot \
 $(POFILES) $(GMOFILES) $(SOURCES)
 
-POTFILES = \
+POTFILES = POTFILES
 
 CATALOGS = @CATALOGS@
 CATOBJEXT = @CATOBJEXT@
 INSTOBJEXT = @INSTOBJEXT@
 
-.SUFFIXES:
-.SUFFIXES: .c .o .po .pox .gmo .mo .msg .cat
+SUFFIXES = .c .o .po .pox .gmo .mo .msg .cat
 
 .c.o:
 	$(COMPILE) $<
@@ -258,10 +256,6 @@ POTFILES: POTFILES.in
 		| sed -e '$$s/\\$$//') > $@-t \
 	    && chmod a-w $@-t \
 	    && mv $@-t $@ )
-
-Makefile: Makefile.in.in ../config.status POTFILES
-	cd .. \
-	  && $(SHELL) ./config.status $(subdir)/$@.in
 
 # Tell versions [3.59,3.63) of GNU make not to export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
