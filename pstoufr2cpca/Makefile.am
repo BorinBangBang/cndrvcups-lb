@@ -1,2 +1,3 @@
 SUBDIRS= filter
 
+ACLOCAL_AMFLAGS = -I m4

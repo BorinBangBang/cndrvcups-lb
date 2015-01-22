@@ -38,6 +38,7 @@ AM_GLIB_GNU_GETTEXT
 AM_DISABLE_STATIC
 AM_PROG_LIBTOOL
 
+AC_CONFIG_SUBDIRS([files])
 AC_CONFIG_FILES([Makefile
                  cngplpmod/Makefile
                  controls/Makefile

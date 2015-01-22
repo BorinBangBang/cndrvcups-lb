@@ -10,7 +10,9 @@ PPDDIR     = ppd
 CPCADIR    = cpca
 CNGPLPDIR  = cngplp
 SRCDIRS = $(FILTERDIR) $(PPDDIR) $(CPCADIR) $(CNGPLPDIR)
-SUBDIRS = $(SRCDIRS)
+SUBDIRS = $(SRCDIRS) tests
+# tests and its subdirs are handled in tests/pstoufr2cpca/filter/configure.ac 
+# (this might change when more unittests in higher subdirs are added)
 
 ACLOCAL_AMFLAGS = -I m4
 

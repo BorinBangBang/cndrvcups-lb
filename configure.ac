@@ -13,13 +13,25 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+# Rather than making the tests a subpackage because it'd be more elegant to 
+# check for the test headers in there, we make this configure.ac the only one, 
+# because the project doesn't fulfill requirements of a modular structure 
+# otherwise
+
 AC_INIT([cndrvcups-common], [2.90], [krichter722@aol.de])
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE([foreign -Wall]) 
+AM_INIT_AUTOMAKE([foreign -Wall subdir-objects]) 
 AC_PROG_CC
 AM_PROG_AR
+
+AC_INCLUDES_DEFAULT
+AC_CHECK_HEADER(check.h,
+    [],
+    [AC_MSG_ERROR([Couldn't find or include check.h])])
+
 LT_INIT # needs to be after AM_PROGS_AR
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_SUBDIRS([pstoufr2cpca ppd cpca cngplp])
-AC_CONFIG_FILES([Makefile pstoufr2cpca/Makefile ppd/Makefile cpca/Makefile cngplp/Makefile])
+
+AC_CONFIG_SUBDIRS([pstoufr2cpca ppd cpca cngplp ])
+AC_CONFIG_FILES([Makefile pstoufr2cpca/Makefile ppd/Makefile cpca/Makefile cngplp/Makefile tests/Makefile tests/pstoufr2cpca/Makefile tests/pstoufr2cpca/filter/Makefile])
 AC_OUTPUT

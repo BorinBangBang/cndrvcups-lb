@@ -1,3 +1,5 @@
+SUBDIRS = .
+
 confdir = /usr/share/cngplp
 
 conf_DATA = \
@@ -304,3 +306,10 @@ conf_DATA = \
 	CNC351ZK.res\
 	CNI220ZS.res
 
+AM_CFLAGS=-O2 -Wall -fPIC
+
+ACLOCAL_AMFLAGS = -I m4
+
+all:
+	gtk-builder-convert cngplp_ufr2.glade cngplp_ufr2.xml
+	$(CC) $(CFLAGS) -g -o cngplp_ufr2 main.c -export-dynamic `pkg-config --cflags --libs gtk+-2.0`

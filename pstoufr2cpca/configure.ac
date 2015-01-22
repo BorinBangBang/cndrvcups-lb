@@ -36,7 +36,11 @@ AC_CHECK_FUNCS([dup2 memset])
 
 LT_INIT
 
-AH_VERBATIM([_GNU_SOURCE],[#undef PROG_PATH])
+#AH_VERBATIM([_GNU_SOURCE],[#undef PROG_PATH])
+# purpose unclear (has been in Makefile.in (?) without comment and causes 
+# failure because is used in `pstoufr2cpca.c`; unclear how this worked before); 
+# omitting causes `autoheader: warning: missing template: PROG_PATH`
+AC_DEFINE([PROG_PATH], ["/usr/local/bin"], [Description: unclear])
 
 AC_CONFIG_FILES([Makefile filter/Makefile])
 AC_OUTPUT
