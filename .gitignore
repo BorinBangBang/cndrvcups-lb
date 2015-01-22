@@ -97,4 +97,9 @@ pstoufr2cpca/m4/ltsugar.m4
 pstoufr2cpca/m4/ltversion.m4
 pstoufr2cpca/filter/pstoufr2cpca
 pstoufr2cpca/filter/.dirstamp
+tests/pstoufr2cpca/filter/.deps
 test-driver
+tests/pstoufr2cpca/filter/pstoufr2cpca_func_test.log
+tests/pstoufr2cpca/filter/pstoufr2cpca_func_test.trs
+tests/pstoufr2cpca/filter/test-suite.log
+tests/pstoufr2cpca/filter/pstoufr2cpca_func_test
