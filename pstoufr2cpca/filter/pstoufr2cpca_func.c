@@ -2115,7 +2115,8 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	if( argc == 7 )
 	{
-		if( (ifd = open(argv[6], O_RDONLY)) == -1 )
+            char *file_name = argv[6];
+		if( (ifd = open(file_name, O_RDONLY)) == -1 )
 		{
 			fputs("ERROR: can't open file.\n", stderr);
 			return 1;
