@@ -1,25 +1,26 @@
- This file gives a brief description on how to build and install
-moduled needed by UFR2 driver.
+# Canon printer driver - cndrvcups-lb
 
-Introduction:
-=============
+ This file gives a brief description on how to build and install
+moduled needed by UFR2 driver. [cndrvcups-common][1] completes the project.
+
+## Introduction:
+
  This package is the part of the printer driver modules for Canon
 URF2 printer. These modules are used with CUPS (Common UNIX Printing
 System) and convert PostScript file into printer readable form.
 
  This package consists of the two modules:
 
-*pstoufr2cpca
+  * pstoufr2cpca:
   This is a CUPS filter module to convert a Postsrcipt file into the UFR2
  printer readable form.
-
-*PPD files
+  * PPD files:
  PPD (PostScript Printer Description) files for UFR2 printers.
 This package supports the following printers;
- (see README-lipslx-x.xx.txt or README-ufr2-x.xx.txt file)
+ (see `README-lipslx-x.xx.txt` or `README-ufr2-x.xx.txt` file)
 
-Licensing:
-==========
+##Licensing:
+
  This package consists of two modules as mentioned above. These
 modules are subject to GNU General Public License (GPL) (see
 COPYING file for more detail).
@@ -27,34 +28,37 @@ COPYING file for more detail).
  Note that licensing term mary vary from file to file. Please consult
 each files for exact licensing conditions.
 
-Requirement:
-============
-    * aclocal		(1.4.x or above)
-    * automake		(1.4.x or above)
-    * libcups		(1.1.17 or above)
-    * libbuftool	(1.00 or above)
+##Requirements
+
+  * aclocal		(1.4.x or above)
+  * automake		(1.4.x or above)
+  * libcups		(1.1.17 or above)
+  * libbuftool	(1.00 or above)
 
 <cngplp>
-    * aclocal   (1.4.x or above)
-    * automake  (1.4.x or above)
-    * Gtk+      (2.4.x or above)
-    * libcups   (1.1.17 or above)
-    * libxml2   (2.6.x or above)
-    * libglade2 (2.4.x or above)
 
-Quick Install:
-==============
+  * aclocal   (1.4.x or above)
+  * automake  (1.4.x or above)
+  * Gtk+      (2.4.x or above)
+  * libcups   (1.1.17 or above)
+  * libxml2   (2.6.x or above)
+  * libglade2 (2.4.x or above)
+
+##Quick Install
+
  To build and install UFR2 modules, run make at the top-level
 directory of this package source tree as follows:
 
-$ ./allgen.sh
-      or
-$ ./allgen.sh -deb
-$ su
-# make install
+    $ ./allgen.sh
 
-Trademark:
-==========
+or
+
+    $ ./allgen.sh -deb
+    $ su
+    # make install
+
+## Trademark
+
  CUPS and the CUPS logo are trademarks of Apple Inc.
 
-
+[1]:https://github.com/krichter722/cndrvcups-common
