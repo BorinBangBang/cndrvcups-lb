@@ -1676,6 +1676,15 @@ int get_copies(char *p_buf)
 	return copies;
 }
 
+/**
+ * 
+ * @param ifd
+ * @param ps_data
+ * @param copies a pointer to an int which stores the number of copies which 
+ * are requested or -1 if the argument is not valid or -2 if a banner is 
+ * requested
+ * @return 
+ */
 static
 ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
 {

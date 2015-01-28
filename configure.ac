@@ -23,6 +23,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign -Wall subdir-objects]) 
 AC_PROG_CC
 AM_PROG_AR
+AM_PROG_CC_C_O
 
 AC_INCLUDES_DEFAULT
 AC_CHECK_HEADER(check.h,
@@ -31,6 +32,7 @@ AC_CHECK_HEADER(check.h,
 
 LT_INIT # needs to be after AM_PROGS_AR
 AC_CONFIG_HEADERS([config.h])
+AC_DEFINE([PROG_PATH], ["/usr/local/bin"], [Description: unclear, potentially dangerous and/or destructive])
 
 AC_CONFIG_SUBDIRS([pstoufr2cpca ppd cpca cngplp ])
 AC_CONFIG_FILES([Makefile pstoufr2cpca/Makefile ppd/Makefile cpca/Makefile cngplp/Makefile tests/Makefile tests/pstoufr2cpca/Makefile tests/pstoufr2cpca/filter/Makefile])

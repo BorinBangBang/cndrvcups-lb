@@ -14,6 +14,8 @@ SUBDIRS = $(SRCDIRS) tests
 # tests and its subdirs are handled in tests/pstoufr2cpca/filter/configure.ac 
 # (this might change when more unittests in higher subdirs are added)
 
+AUTOMAKE_OPTIONS = subdir-objects
+
 ACLOCAL_AMFLAGS = -I m4
 
 ### Install modules ###

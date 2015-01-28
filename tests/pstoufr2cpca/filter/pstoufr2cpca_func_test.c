@@ -23,16 +23,21 @@ teardown (void)
   
 }
 
+#define TEST_PPD_FILE_PATH 
+
 START_TEST (test_pstoufr2cpca_main)
 {
-    char *argv[5];
+    char *argv[7];
     // parameters according to `man filter`
-    argv[0] = "1"; //order
-    argv[1] = "richter"; //user
-    argv[2] = "title"; //title
-    argv[3] = "1"; //# of copies
-    argv[4] = "/home/richter/.bashrc"; //file name
-    int argc = 5;
+    argv[0] = "@TODO";
+    argv[1] = "1"; //order
+    argv[2] = "richter"; //user
+    argv[3] = "title"; //title
+    argv[4] = "1"; //# of copies
+    argv[5] = "MediaType=A4";
+    argv[6] = "/home/richter/.bashrc"; //file name
+    int argc = 7;
+    //setenv("PPD", ); @TODO
     
     int returncode = pstoufr2cpca_main(argc, argv);
     
@@ -60,6 +65,7 @@ main (void)
   int number_failed;
   Suite *s = pstoufr2cpca_suite ();
   SRunner *sr = srunner_create (s);
+  srunner_set_fork_status (sr, CK_NOFORK);
   srunner_run_all (sr, CK_NORMAL);
   number_failed = srunner_ntests_failed (sr);
   srunner_free (sr);
