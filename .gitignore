@@ -103,3 +103,4 @@ tests/pstoufr2cpca/filter/pstoufr2cpca_func_test.log
 tests/pstoufr2cpca/filter/pstoufr2cpca_func_test.trs
 tests/pstoufr2cpca/filter/test-suite.log
 tests/pstoufr2cpca/filter/pstoufr2cpca_func_test
+confdefs.h
