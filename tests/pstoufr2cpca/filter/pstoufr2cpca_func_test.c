@@ -23,12 +23,19 @@ teardown (void)
   
 }
 
-#define TEST_PPD_FILE_PATH 
+#define TEST_PPD_FILE_PATH "/etc/cups/ppd/pqueue.ppd"
 
 START_TEST (test_pstoufr2cpca_main)
 {
+    /*
+     * Based on http://fedoraproject.org/wiki/How_to_debug_printing_problems 
+     * there're a few tests which really exceed the boundaries of unit tests, 
+     * so the following contradicts the aim of the enhancements to create proper 
+     * unit tests, but one has to work around very poor (filter) developer resources 
+     * provided by CUPS
+     */
     char *argv[7];
-    // parameters according to `man filter`
+    // parameters according to `man filter` and the reference cited above
     argv[0] = "@TODO";
     argv[1] = "1"; //order
     argv[2] = "richter"; //user
@@ -37,7 +44,10 @@ START_TEST (test_pstoufr2cpca_main)
     argv[5] = "MediaType=A4";
     argv[6] = "/home/richter/.bashrc"; //file name
     int argc = 7;
-    //setenv("PPD", ); @TODO
+    setenv("PPD", 
+            TEST_PPD_FILE_PATH, 
+            1 //replace
+            );
     
     int returncode = pstoufr2cpca_main(argc, argv);
     

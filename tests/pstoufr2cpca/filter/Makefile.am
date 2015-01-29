@@ -12,7 +12,7 @@ AM_CFLAGS = -O2 -Wall -fPIC
 
 ACLOCAL_AMFLAGS = -I m4
 
-pstoufr2cpca_func_test_LDADD = -lbuftool -lcups 
+pstoufr2cpca_func_test_LDADD = -lbuftool -lcups -llog4c -lpthread
 TESTS = pstoufr2cpca_func_test
 
 pstoufr2cpca_func_test_LDFLAGS = -pthread -lcheck_pic  -pthread -lrt -lm 

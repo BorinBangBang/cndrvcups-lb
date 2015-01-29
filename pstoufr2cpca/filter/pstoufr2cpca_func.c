@@ -31,10 +31,10 @@
 #include <string.h>
 #include <strings.h>
 #include <sys/stat.h>
+#include <log4c.h>
 
 #include "paramlist.h"
 #include "buflist.h"
-
 
 
 #define	INDENT_NONE	0
@@ -1683,10 +1683,11 @@ int get_copies(char *p_buf)
  * @param copies a pointer to an int which stores the number of copies which 
  * are requested or -1 if the argument is not valid or -2 if a banner is 
  * requested
+ * @param LOGGER a logger to use (ignored if NULL)
  * @return 
  */
 static
-ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
+ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_category_t *LOGGER)
 {
 	char read_buf[DATA_BUF_SIZE];
 	ParamList *p_list = NULL;
@@ -1729,11 +1730,13 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
 
 		bl = buflist_new((unsigned char *)read_buf, read_bytes);
 
-		if( *ps_data == NULL )
+		if( *ps_data == NULL ) 
+                {
 			*ps_data = bl;
-		else
+		} else {
 			buflist_add_tail(prev_bl, bl);
-
+                }
+                
 		prev_bl = bl;
 
 		if( read_bytes > 0 )
@@ -1792,19 +1795,30 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
 		}
 		else if( !begin_page && strncmp(read_buf, "%%Page:", 7) == 0 )
 		{
+                        if(LOGGER != NULL) {
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Beginning page in PPD");		
+                        }
 			begin_page = 1;
 		}
 		else if((p_read_buf = strstr(read_buf, "NumCopies")) != NULL)
 		{
 			int tmp = get_copies(p_read_buf + 9);
-			if(tmp > 0)
+			if(tmp > 0) {
 				numcopies = tmp;
+                        }
+                        if(LOGGER != NULL) {
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading NumCopies %d from PPD", numcopies);		
+                        }
 		}
 		else if(strncmp(read_buf, "/#copies", 8) == 0)
 		{
 			int tmp = get_copies(read_buf + 8);
-			if(tmp > 0)
+			if(tmp > 0) {
 				numcopies = tmp;
+                        }                        
+                        if(LOGGER != NULL) {
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading /#copies %d from PPD", numcopies);		
+                        }
 		}
 		else if(strncmp(read_buf, BANNER_DESC, BANNER_DESC_LEN) == 0)
 		{
@@ -1812,12 +1826,18 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
 		}
 		else if( begin_page )
 		{
-			if( strncmp(read_buf, "%%EndPageSetup", 14) == 0 )
+			if( strncmp(read_buf, "%%EndPageSetup", 14) == 0 ) 
+                        {
 				break;
-			else if( strncmp(read_buf, "gsave", 5) == 0 )
+                        }
+			else if( strncmp(read_buf, "gsave", 5) == 0 ) 
+                        {
 				break;
-			else if( read_buf[0] >= '0' && read_buf[0] <= '9' )
+                        }
+			else if( read_buf[0] >= '0' && read_buf[0] <= '9' ) 
+                        {
 				break;
+                        }
 		}
 	}
 
@@ -1825,17 +1845,23 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies)
 	{
 		BufList *bl = buflist_new((unsigned char *)read_buf, read_bytes);
 
-		if( *ps_data == NULL )
+		if( *ps_data == NULL ) {
 			*ps_data = bl;
-		else
-			buflist_add_tail(prev_bl, bl);
+                }
+		else 
+                {
+			buflist_add_tail(prev_bl, bl); 
+                }
 
 		prev_bl = bl;
 
-		if( read_buf[read_bytes - 1] == '\n' )
+		if( read_buf[read_bytes - 1] == '\n' ) {
 			read_buf[read_bytes - 1] = '\0';
-		else
+                }
+		else 
+                {
 			read_buf[read_bytes] = '\0';
+                }
 	}
 	if(numcopies > 0)
 	{
@@ -2009,8 +2035,7 @@ int make_cmd_arg(cups_option_t *p_cups_opt, int num_opt,
 
 		return 0;
 	}
-	else
-		return -1;
+	return -1;
 }
 
 int exec_filter(char *cmd_arg[], int ofd, int fds[2])
@@ -2077,6 +2102,10 @@ sigterm_handler(int sigcode)
 
 int pstoufr2cpca_main(int argc, char *argv[])
 {
+        const log4c_category_t* LOGGER;
+        log4c_init();
+        LOGGER = log4c_category_get("pstoufr2cpca_func");
+        
         cups_option_t *p_cups_opt = NULL;
 	int num_opt = 0;
 	ParamList *p_ps_param = NULL;
@@ -2096,19 +2125,21 @@ int pstoufr2cpca_main(int argc, char *argv[])
 #endif
 
 	setbuf(stderr, NULL);
-	fprintf(stderr, "DEBUG: pstoufr2cpca start.\n");
+        log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "pstoufr2cpca start");
 
 	memset(&sigact, 0, sizeof(sigact));
 	sigact.sa_handler = sigterm_handler;
 	if( sigaction(SIGTERM, &sigact, NULL) )
 	{
-		fputs("ERROR: pstoufr2cpca can't register signal hander.\n", stderr);
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "pstoufr2cpca can't register signal hander.");
+                log4c_fini();
 		return 1;
 	}
 
 	if( argc < 6 || argc > 7 )
 	{
-		fputs("ERROR: pstoufr2cpca illegal parameter number.\n", stderr);
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "pstoufr2cpca illegal parameter number");
+                log4c_fini();
 		return 1;
 	}
 
@@ -2117,32 +2148,42 @@ int pstoufr2cpca_main(int argc, char *argv[])
 		num_opt = cupsParseOptions(argv[5], 0, &p_cups_opt);
 		if( num_opt < 0 )
 		{
-			fputs("ERROR: illegal option.\n", stderr);
+                        log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "illegal option.");
+                        log4c_fini();
 			return 1;
 		}
 	}
 
 	if( argc == 7 )
 	{
-            char *file_name = argv[6];
+                /* file specified on commandline, i.e. don't read from stdin */
+                char *file_name = argv[6];
 		if( (ifd = open(file_name, O_RDONLY)) == -1 )
 		{
-			fputs("ERROR: can't open file.\n", stderr);
+                        log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "can't open file '%s'.", file_name);
+                        log4c_fini();
 			return 1;
 		}
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "reading from file '%s'", file_name);
 	}
+        else 
+        {
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "reading from stdin");
+        }
 
 	init_cmd_arg(cmd_arg, org_cmd_arg);
 
 #ifdef	DEBUG_IN_PS
 	g_in_log_fd = open("/tmp/debug_in_log.ps", O_WRONLY);
 #endif
-	p_ps_param = get_ps_params(ifd, &p_ps_data, &copies);
-
+	p_ps_param = get_ps_params(ifd, &p_ps_data, &copies, LOGGER);
+        log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "ps param: copies: %d", copies);
+        log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "ps param: param list: %s", param_list_to_string(p_ps_param));
+        
 	if( make_cmd_arg(p_cups_opt, num_opt,
 			 p_ps_param, cmd_arg, copies, argv[2], argv[3]) < 0 )
 	{
-		fputs("ERROR: can't make parameter.\n", stderr);
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "can't make parameter.");
 		goto error_return;
 	}
 
@@ -2189,10 +2230,10 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 					if( write_bytes < 0 )
 					{
-						if( errno == EINTR )
+						if( errno == EINTR ) {
 							continue;
-						fprintf(stderr,
-							"ERROR: pstoufr2cpca write error,%d.\n", errno);
+                                                }
+                                                log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "pstoufr2cpca write error, errno %d.", errno);
 						goto error_exit;
 					}
 					read_bytes -= write_bytes;
@@ -2202,9 +2243,10 @@ int pstoufr2cpca_main(int argc, char *argv[])
 			}
 			else if( read_bytes < 0 )
 			{
-				if( errno == EINTR )
+				if( errno == EINTR ) {
 					continue;
-				fprintf(stderr, "ERROR: pstoufr2cpca read error,%d.\n", errno);
+                                }
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "pstoufr2cpca read error, errno %d.", errno);
 				goto error_exit;
 			}
 			else
@@ -2228,33 +2270,43 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	free_cmd_arg(cmd_arg);
 
-	if( p_ps_param != NULL )
+	if( p_ps_param != NULL ) {
 		param_list_free(p_ps_param);
-	if( p_ps_data != NULL )
+        }
+	if( p_ps_data != NULL ) {
 		buflist_destroy(p_ps_data);
-	if( ifd != 0 )
+        }
+	if( ifd != 0 ) {
 		close(ifd);
+        }
 
 	close(fds[1]);
 
-	if( g_filter_pid != -1 )
+	if( g_filter_pid != -1 ) {
 		waitpid(g_filter_pid, NULL, 0);
-
+        }
+        
+        log4c_fini();
 	return 0;
 
 error_exit:
-	if( p_data_buf != NULL )
+	if( p_data_buf != NULL ) {
 		free(p_data_buf);
+        }
 
 error_return:
 	free_cmd_arg(cmd_arg);
 
-	if( p_ps_param != NULL )
+	if( p_ps_param != NULL ) {
 		param_list_free(p_ps_param);
-	if( p_ps_data != NULL )
+        }
+	if( p_ps_data != NULL ) {
 		buflist_destroy(p_ps_data);
-	if( ifd != 0 )
+        }
+	if( ifd != 0 ) {
 		close(ifd);
+        }
 
+        log4c_fini();
 	return 1;
 }

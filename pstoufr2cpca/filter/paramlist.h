@@ -41,6 +41,7 @@ void param_list_add(ParamList **root,
 void param_list_free(ParamList *pl);
 int param_list_num(ParamList *pl);
 void param_list_print(ParamList *pl);
+char* param_list_to_string(ParamList *pl);
 
 #endif
 

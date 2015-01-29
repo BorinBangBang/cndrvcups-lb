@@ -29,6 +29,9 @@ AC_INCLUDES_DEFAULT
 AC_CHECK_HEADER(check.h,
     [],
     [AC_MSG_ERROR([Couldn't find or include check.h])])
+AC_CHECK_HEADER(log4c.h,
+    [],
+    [AC_MSG_ERROR([Couldn't find or include log4c.h])])
 
 LT_INIT # needs to be after AM_PROGS_AR
 AC_CONFIG_HEADERS([config.h])

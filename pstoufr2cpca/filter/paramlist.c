@@ -120,3 +120,18 @@ void param_list_print(ParamList *pl)
 	}
 }
 
+/**
+ * converts the given `ParamList` to a string
+ * @param pl the `ParamList` to convert. An empty string is returned if `NULL`.
+ * @return 
+ */
+char* param_list_to_string(ParamList *pl)
+{
+        char *ret_value = malloc(sizeof(char));
+        *ret_value = '\0';
+        for( ; pl != NULL ; pl = pl->next )
+        {
+                strncat(ret_value, pl->value, pl->value_size);
+        }
+        return ret_value;
+}
