@@ -13,25 +13,32 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Rather than making the tests a subpackage because it'd be more elegant to 
-# check for the test headers in there, we make this configure.ac the only one, 
-# because the project doesn't fulfill requirements of a modular structure 
+# Rather than making the tests a subpackage because it'd be more elegant to
+# check for the test headers in there, we make this configure.ac the only one,
+# because the project doesn't fulfill requirements of a modular structure
 # otherwise
 
 AC_INIT([cndrvcups-common], [2.90], [krichter722@aol.de])
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE([foreign -Wall subdir-objects]) 
+AM_INIT_AUTOMAKE([foreign -Wall subdir-objects])
 AC_PROG_CC
 AM_PROG_AR
 AM_PROG_CC_C_O
 
-AC_INCLUDES_DEFAULT
 AC_CHECK_HEADER(check.h,
     [],
-    [AC_MSG_ERROR([Couldn't find or include check.h])])
+    [
+        AS_IF(test -e /etc/debian_version,
+            [AC_MSG_ERROR([Couldn't find or include log4c.h (install 'check' with apt-get)])],
+            [AC_MSG_ERROR([Couldn't find or include log4c.h])])
+    ])
 AC_CHECK_HEADER(log4c.h,
     [],
-    [AC_MSG_ERROR([Couldn't find or include log4c.h])])
+    [
+        AS_IF(test -e /etc/debian_version,
+            [AC_MSG_ERROR([Couldn't find or include log4c.h])],
+            [AC_MSG_ERROR([Couldn't find or include log4c.h (install 'liblog4c-dev' with apt-get)])],
+    ])
 
 LT_INIT # needs to be after AM_PROGS_AR
 AC_CONFIG_HEADERS([config.h])
