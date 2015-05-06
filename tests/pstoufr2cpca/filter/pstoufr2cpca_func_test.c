@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <check.h>
-#include "../../../pstoufr2cpca/filter/pstoufr2cpca_func.h"
+#include "../../../pstoufr2cpca/filter/pstoufr2cpca.h"
 
 
 void
