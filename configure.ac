@@ -36,8 +36,8 @@ AC_CHECK_HEADER(log4c.h,
     [],
     [
         AS_IF(test -e /etc/debian_version,
-            [AC_MSG_ERROR([Couldn't find or include log4c.h])],
             [AC_MSG_ERROR([Couldn't find or include log4c.h (install 'liblog4c-dev' with apt-get)])],
+            [AC_MSG_ERROR([Couldn't find or include log4c.h])])
     ])
 
 LT_INIT # needs to be after AM_PROGS_AR
