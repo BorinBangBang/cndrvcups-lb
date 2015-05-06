@@ -36,11 +36,6 @@
 #include "paramlist.h"
 #include "buflist.h"
 
-
-#define	INDENT_NONE	0
-#define	INDENT_RIGHT	1
-#define	INDENT_LEFT	2
-
 #if HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -480,43 +475,6 @@ static ChangeOptListTable* change_option_list_table_list[CHANGE_OPTION_LIST_TABL
 	change_option_list_table_2
 };
 
-#ifdef DEBUGLOG
-	#include <stdarg.h>
-
-	static void debuglog(int indent, const char *message, ...)
-	{
-		static int debug_indent;
-		va_list	ap;
-		int	i;
-		FILE *fp = fopen("/tmp/pstoufr2cpca.log", "a");
-
-		if (indent == INDENT_LEFT)
-		{
-			debug_indent--;
-			if (debug_indent < 0){
-				debug_indent = 0;
-			}
-		}
-
-		for (i = 0; i < debug_indent; i++)
-		{
-			fprintf(fp, "\t");
-		}
-
-		va_start(ap, message);
-		vfprintf(fp, message, ap);
-
-		fclose(fp);
-
-		if (indent == INDENT_RIGHT)
-		{
-			debug_indent++;
-		}
-	}
-#else
-	#define	debuglog(a, b, ...)
-#endif
-
 static
 int is_comma_chg_opt_name(char *name)
 {
@@ -825,9 +783,22 @@ static void change_p_job_attr_list( ParamList ** const p_list )
 	return;
 }
 
+/**
+ *
+ * @param p_ppd
+ * @param p_cups_opt
+ * @param num_opt
+ * @param p_table
+ * @param copies
+ * @param user
+ * @param title
+ * @param LOGGER a logger to use (ignored if NULL)
+ * @return
+ */
 static
 char *ppd_mark_to_job_attr(ppd_file_t *p_ppd, cups_option_t *p_cups_opt,
-	 int num_opt, char *p_table, int copies, char *user, char *title)
+	 int num_opt, char *p_table, int copies, char *user, char *title,
+        const log4c_category_t *LOGGER)
 {
 	int ppd_opt_num = sizeof(ppd_opt_name) / sizeof(char*);
 	unsigned int opt_len = strlen(p_table);
@@ -1143,7 +1114,7 @@ char *ppd_mark_to_job_attr(ppd_file_t *p_ppd, cups_option_t *p_cups_opt,
 
 			p_job_attr[opt_len - 1] = '\0';
 
-			debuglog(INDENT_NONE, "p_job_attr = [%s]\n", p_job_attr);
+			log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "p_job_attr = [%s]\n", p_job_attr);
 
 			if( (strstr( p_job_attr, "CNChangeOptList" ) != NULL) ||
 			    (strstr( p_job_attr, "CNOutputAdjustment" ) != NULL) )
@@ -1182,7 +1153,7 @@ char *ppd_mark_to_job_attr(ppd_file_t *p_ppd, cups_option_t *p_cups_opt,
 					p_job_attr[opt_len - 1U] = '\0';
 					param_list_free( p_list );
 
-					debuglog(INDENT_NONE, "p_job_attr(change) = [%s]\n", p_job_attr);
+                                        log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "p_job_attr(change) = [%s]\n", p_job_attr);
 				}
 			}
 			if( strstr( p_job_attr, "CN_Filter_DebugMode" ) != NULL ) {
@@ -1318,8 +1289,17 @@ int GetUIValue(char *ptr, char *key, char *val, int size)
 	return opt_flag;
 }
 
+/**
+ *
+ * @param ppd_file
+ * @param p_buf
+ * @param buf_len
+ * @param LOGGER a logger to use (ignored if NULL)
+ * @return
+ */
 static
-int get_driver_table(char *ppd_file, char *p_buf, int buf_len)
+int get_driver_table(char *ppd_file, char *p_buf, int buf_len,
+        const log4c_category_t *LOGGER)
 {
 	FILE	*fp = NULL;
 	int	got_tbl_num = 0;
@@ -1366,7 +1346,7 @@ int get_driver_table(char *ppd_file, char *p_buf, int buf_len)
 				{
 					p_buf_len = strlen(p_buf);
 
-					debuglog(INDENT_NONE, "key:value = [%s]:[%s]\n", key, value);
+                                        log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "key:value = [%s]:[%s]\n", key, value);
 
 					if( is_drv_tbl_name(key) )
 					{
@@ -1565,22 +1545,35 @@ int get_driver_model(char *ppd_file,
 	return (got_tbl_num == mdl_tbl_num)? 1 : 0;
 }
 
+/**
+ *
+ * @param p_ppd
+ * @param p_ppd_name
+ * @param p_cups_opt
+ * @param num_opt
+ * @param copies
+ * @param user
+ * @param title
+ * @param LOGGER a logger to use (ignored if NULL)
+ * @return
+ */
 static
 char *make_job_attr(ppd_file_t *p_ppd, char *p_ppd_name,
-	 cups_option_t *p_cups_opt, int num_opt, int copies, char *user, char *title)
+	 cups_option_t *p_cups_opt, int num_opt, int copies, char *user,
+        char *title, const log4c_category_t *LOGGER)
 {
 	char *p_job_attr = NULL;
 	char table_buf[TABLE_BUF_SIZE];
 
 	table_buf[0] = '\0';
-	if( get_driver_table(p_ppd_name, table_buf, sizeof(table_buf)) )
+	if( get_driver_table(p_ppd_name, table_buf, sizeof(table_buf), LOGGER) )
 	{
 		get_driver_list(p_ppd_name, table_buf, sizeof(table_buf));
 
-		debuglog(INDENT_NONE, "table_buf = [%s]\n", table_buf);
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "table_buf = [%s]\n", table_buf);
 
 		p_job_attr = ppd_mark_to_job_attr(p_ppd, p_cups_opt,
-				num_opt, table_buf, copies, user, title);
+				num_opt, table_buf, copies, user, title, LOGGER);
 	}
 	return p_job_attr;
 }
@@ -1677,14 +1670,14 @@ int get_copies(char *p_buf)
 }
 
 /**
- * 
+ *
  * @param ifd
  * @param ps_data
- * @param copies a pointer to an int which stores the number of copies which 
- * are requested or -1 if the argument is not valid or -2 if a banner is 
+ * @param copies a pointer to an int which stores the number of copies which
+ * are requested or -1 if the argument is not valid or -2 if a banner is
  * requested
  * @param LOGGER a logger to use (ignored if NULL)
- * @return 
+ * @return
  */
 static
 ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_category_t *LOGGER)
@@ -1730,13 +1723,13 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 
 		bl = buflist_new((unsigned char *)read_buf, read_bytes);
 
-		if( *ps_data == NULL ) 
+		if( *ps_data == NULL )
                 {
 			*ps_data = bl;
 		} else {
 			buflist_add_tail(prev_bl, bl);
                 }
-                
+
 		prev_bl = bl;
 
 		if( read_bytes > 0 )
@@ -1796,7 +1789,7 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 		else if( !begin_page && strncmp(read_buf, "%%Page:", 7) == 0 )
 		{
                         if(LOGGER != NULL) {
-                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Beginning page in PPD");		
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Beginning page in PPD");
                         }
 			begin_page = 1;
 		}
@@ -1807,7 +1800,7 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 				numcopies = tmp;
                         }
                         if(LOGGER != NULL) {
-                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading NumCopies %d from PPD", numcopies);		
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading NumCopies %d from PPD", numcopies);
                         }
 		}
 		else if(strncmp(read_buf, "/#copies", 8) == 0)
@@ -1815,9 +1808,9 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 			int tmp = get_copies(read_buf + 8);
 			if(tmp > 0) {
 				numcopies = tmp;
-                        }                        
+                        }
                         if(LOGGER != NULL) {
-                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading /#copies %d from PPD", numcopies);		
+                                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "Reading /#copies %d from PPD", numcopies);
                         }
 		}
 		else if(strncmp(read_buf, BANNER_DESC, BANNER_DESC_LEN) == 0)
@@ -1826,15 +1819,15 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 		}
 		else if( begin_page )
 		{
-			if( strncmp(read_buf, "%%EndPageSetup", 14) == 0 ) 
+			if( strncmp(read_buf, "%%EndPageSetup", 14) == 0 )
                         {
 				break;
                         }
-			else if( strncmp(read_buf, "gsave", 5) == 0 ) 
+			else if( strncmp(read_buf, "gsave", 5) == 0 )
                         {
 				break;
                         }
-			else if( read_buf[0] >= '0' && read_buf[0] <= '9' ) 
+			else if( read_buf[0] >= '0' && read_buf[0] <= '9' )
                         {
 				break;
                         }
@@ -1848,9 +1841,9 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 		if( *ps_data == NULL ) {
 			*ps_data = bl;
                 }
-		else 
+		else
                 {
-			buflist_add_tail(prev_bl, bl); 
+			buflist_add_tail(prev_bl, bl);
                 }
 
 		prev_bl = bl;
@@ -1858,7 +1851,7 @@ ParamList *get_ps_params(int ifd, BufList **ps_data, int *copies, const log4c_ca
 		if( read_buf[read_bytes - 1] == '\n' ) {
 			read_buf[read_bytes - 1] = '\0';
                 }
-		else 
+		else
                 {
 			read_buf[read_bytes] = '\0';
                 }
@@ -1956,9 +1949,22 @@ void set_cmd_arg(char *cmd_arg[], int index, char *str)
 	cmd_arg[index] = str;
 }
 
+/**
+ *
+ * @param p_cups_opt
+ * @param num_opt
+ * @param p_param
+ * @param cmd_arg
+ * @param copies
+ * @param user
+ * @param title
+ * @param LOGGER a logger to use (ignored if NULL)
+ * @return
+ */
 static
 int make_cmd_arg(cups_option_t *p_cups_opt, int num_opt,
-	ParamList *p_param, char *cmd_arg[], int copies, char *user, char *title)
+	ParamList *p_param, char *cmd_arg[], int copies, char *user,
+        char *title, const log4c_category_t *LOGGER)
 {
 #ifdef DEBUG_PPD
 	char *p_ppd_name = "debug.ppd";
@@ -2000,7 +2006,7 @@ int make_cmd_arg(cups_option_t *p_cups_opt, int num_opt,
 		cmd_arg[ARGV_HEIGHT], (int)(p_size->length * (float)reso / 72.0));
 
 	p_job_attr = make_job_attr(
-		p_ppd, p_ppd_name, p_cups_opt, num_opt, copies, user, title);
+		p_ppd, p_ppd_name, p_cups_opt, num_opt, copies, user, title, LOGGER);
 	ppdClose(p_ppd);
 
 	if( get_driver_model(
@@ -2105,7 +2111,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
         const log4c_category_t* LOGGER;
         log4c_init();
         LOGGER = log4c_category_get("pstoufr2cpca_func");
-        
+
         cups_option_t *p_cups_opt = NULL;
 	int num_opt = 0;
 	ParamList *p_ps_param = NULL;
@@ -2166,7 +2172,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
 		}
                 log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "reading from file '%s'", file_name);
 	}
-        else 
+        else
         {
                 log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "reading from stdin");
         }
@@ -2179,9 +2185,9 @@ int pstoufr2cpca_main(int argc, char *argv[])
 	p_ps_param = get_ps_params(ifd, &p_ps_data, &copies, LOGGER);
         log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "ps param: copies: %d", copies);
         log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "ps param: param list: %s", param_list_to_string(p_ps_param));
-        
+
 	if( make_cmd_arg(p_cups_opt, num_opt,
-			 p_ps_param, cmd_arg, copies, argv[2], argv[3]) < 0 )
+			 p_ps_param, cmd_arg, copies, argv[2], argv[3], LOGGER) < 0)
 	{
                 log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "can't make parameter.");
 		goto error_return;
@@ -2285,7 +2291,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
 	if( g_filter_pid != -1 ) {
 		waitpid(g_filter_pid, NULL, 0);
         }
-        
+
         log4c_fini();
 	return 0;
 
