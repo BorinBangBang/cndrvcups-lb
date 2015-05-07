@@ -82,8 +82,6 @@ typedef struct
 static ChangeOptListTable *get_change_option_list_table( const int id );
 static ParamList *get_p_job_attr_list( const char * const p_job_attr );
 static void change_p_job_attr_list( ParamList **p_list );
-static int pstoufr2cpca_main0(int num_opt, int copies, char* user, char* title,
-        int ifd, cups_option_t *p_cups_opt, char *cmd_arg[], const log4c_category_t *LOGGER);
 
 enum {
 	ARGV_GS,
@@ -2172,7 +2170,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	init_cmd_arg(cmd_arg, org_cmd_arg);
 
-        int pstoufr2cpca_main0_ret_value = pstoufr2cpca_main0(
+        int pstoufr2cpca_main0_ret_value = pstoufr2cpca(
                 num_opt, copies, user, title, ifd, p_cups_opt, cmd_arg, LOGGER);
         return pstoufr2cpca_main0_ret_value;
 }
@@ -2184,7 +2182,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
  * @param LOGGER a logger to use (ignored if NULL)
  * @return
  */
-static int pstoufr2cpca_main0(int num_opt, int copies, char* user, char* title,
+int pstoufr2cpca(int num_opt, int copies, char* user, char* title,
         int ifd, cups_option_t *p_cups_opt, char *cmd_arg[], const log4c_category_t *LOGGER)
 {
 	ParamList *p_ps_param = NULL;
