@@ -82,7 +82,8 @@ typedef struct
 static ChangeOptListTable *get_change_option_list_table( const int id );
 static ParamList *get_p_job_attr_list( const char * const p_job_attr );
 static void change_p_job_attr_list( ParamList **p_list );
-
+static int pstoufr2cpca_main0(int num_opt, int copies, char* user, char* title,
+        int ifd, cups_option_t *p_cups_opt, char *cmd_arg[], const log4c_category_t *LOGGER);
 
 enum {
 	ARGV_GS,
@@ -2114,21 +2115,10 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
         cups_option_t *p_cups_opt = NULL;
 	int num_opt = 0;
-	ParamList *p_ps_param = NULL;
-	BufList *p_ps_data = NULL;
-	char *p_data_buf;
 	int ifd = 0;
-	int fds[2];
 	struct sigaction sigact;
 	char *cmd_arg[ARGV_NUM];
 	int copies = -1;
-#ifdef	UNIT_TEST
-	freopen( "/tmp/unit_test/pstoufr2cpca_leak_check.log", "a+", stderr);
-#endif
-
-#ifdef	DEBUG_SLEEP
-	sleep(30);
-#endif
 
 	setbuf(stderr, NULL);
         log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "pstoufr2cpca start");
@@ -2148,6 +2138,9 @@ int pstoufr2cpca_main(int argc, char *argv[])
                 log4c_fini();
 		return 1;
 	}
+
+        char* user = argv[2];
+        char* title = argv[3];
 
 	if( argv[5] != NULL )
 	{
@@ -2179,6 +2172,25 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	init_cmd_arg(cmd_arg, org_cmd_arg);
 
+        int pstoufr2cpca_main0_ret_value = pstoufr2cpca_main0(
+                num_opt, copies, user, title, ifd, p_cups_opt, cmd_arg, LOGGER);
+        return pstoufr2cpca_main0_ret_value;
+}
+
+/**
+ *
+ * @param ifd the file descriptor of the file to read
+ * @param copies the number of copies to make
+ * @param LOGGER a logger to use (ignored if NULL)
+ * @return
+ */
+static int pstoufr2cpca_main0(int num_opt, int copies, char* user, char* title,
+        int ifd, cups_option_t *p_cups_opt, char *cmd_arg[], const log4c_category_t *LOGGER)
+{
+	ParamList *p_ps_param = NULL;
+	BufList *p_ps_data = NULL;
+	char *p_data_buf;
+	int fds[2];
 #ifdef	DEBUG_IN_PS
 	g_in_log_fd = open("/tmp/debug_in_log.ps", O_WRONLY);
 #endif
@@ -2187,7 +2199,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
         log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "ps param: param list: %s", param_list_to_string(p_ps_param));
 
 	if( make_cmd_arg(p_cups_opt, num_opt,
-			 p_ps_param, cmd_arg, copies, argv[2], argv[3], LOGGER) < 0)
+			 p_ps_param, cmd_arg, copies, user, title, LOGGER) < 0)
 	{
                 log4c_category_log(LOGGER, LOG4C_PRIORITY_ERROR, "can't make parameter.");
 		goto error_return;
