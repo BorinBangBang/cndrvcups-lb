@@ -4,6 +4,9 @@
  *
  * Created on 22. Januar 2015, 07:33
  */
+#include <log4c.h>
+#include <cups/cups.h>
+#include <cups/ppd.h>
 
 #ifndef PSTOUFR2CPCA_H
 #define	PSTOUFR2CPCA_H

@@ -2142,6 +2142,7 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	if( argv[5] != NULL )
 	{
+                log4c_category_log(LOGGER, LOG4C_PRIORITY_DEBUG, "argv[5]: %s", argv[5]);
 		num_opt = cupsParseOptions(argv[5], 0, &p_cups_opt);
 		if( num_opt < 0 )
 		{
@@ -2170,15 +2171,22 @@ int pstoufr2cpca_main(int argc, char *argv[])
 
 	init_cmd_arg(cmd_arg, org_cmd_arg);
 
-        int pstoufr2cpca_main0_ret_value = pstoufr2cpca(
+        int pstoufr2cpca_ret_value = pstoufr2cpca(
                 num_opt, copies, user, title, ifd, p_cups_opt, cmd_arg, LOGGER);
-        return pstoufr2cpca_main0_ret_value;
+        return pstoufr2cpca_ret_value;
 }
 
 /**
- *
- * @param ifd the file descriptor of the file to read
+ * @param num_opt number of options passed to cupsMarkOptions of ppd.h
+ * (undocumented at
+ * http://www.cups.org/documentation.php/api-ppd.html#cupsMarkOptions and
+ * deprecated)
  * @param copies the number of copies to make
+ * @param user the user owning the process
+ * @param title the title of the job
+ * @param ifd the file descriptor of the file to read
+ * @param p_cups_opt the CUPS options as parsed with cupsParseOptions of ppd.h
+ * (see http://www.cups.org/documentation.php/api-ppd.html for details)
  * @param LOGGER a logger to use (ignored if NULL)
  * @return
  */
